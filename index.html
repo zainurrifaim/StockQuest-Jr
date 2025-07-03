@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockQuest Jr.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-blue-50">
+
+    <div id="game-container" class="container mx-auto p-4 md:p-6">
+
+        <header id="game-header">
+            <h1 class="game-title">StockQuest Jr.</h1>
+            <div id="game-controls">
+                <div class="control-item">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <span class="day-counter">Day: <span id="current-day">1</span> / 20</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="dashboard" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                <div class="card" id="portfolio-card">
+                    <h2 class="card-title"><i class="fas fa-wallet text-yellow-500"></i> My Portfolio</h2>
+                    <div class="portfolio-stats">
+                        <div class="stat-item">
+                            <span><i class="fas fa-money-bill-wave text-green-500"></i> Cash:</span>
+                            <span id="portfolio-cash">$10,000.00</span>
+                        </div>
+                        <div class="stat-item total-wealth">
+                            <span><i class="fas fa-gem text-blue-500"></i> Total Wealth:</span>
+                            <span id="total-wealth">$10,000.00</span>
+                        </div>
+                    </div>
+                    <div id="portfolio-stocks">
+                        </div>
+                </div>
+
+                <div class="card" id="news-card">
+                    <h2 class="card-title"><i class="fas fa-newspaper text-orange-500"></i> Today's News</h2>
+                    <div id="news-feed"></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 card" id="market-card">
+                <h2 class="card-title"><i class="fas fa-store text-indigo-500"></i> Stock Market</h2>
+                <div id="stock-market-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    </div>
+            </div>
+
+        </main>
+
+        <footer id="game-footer" class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="card md:col-span-1" id="actions-card">
+                 <h2 class="card-title"><i class="fas fa-cogs text-gray-500"></i> Controls</h2>
+                <button id="next-day-btn" class="game-button next-day">
+                    <i class="fas fa-forward"></i> Next Day
+                </button>
+                <button id="restart-btn" class="game-button restart hidden">
+                    <i class="fas fa-redo"></i> Restart
+                </button>
+            </div>
+            <div class="card md:col-span-2" id="achievements-card">
+                <h2 class="card-title"><i class="fas fa-trophy text-yellow-400"></i> Achievements</h2>
+                <ul id="achievements-list"></ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="stock-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="close-stock-modal"><i class="fas fa-times"></i></button>
+            <div id="stock-modal-info">
+                <h3 id="stock-modal-name">Stock Name (TICKER)</h3>
+                <p id="stock-modal-desc">This is a description of the company.</p>
+                <div id="stock-modal-chart-container">
+                    <canvas id="stock-chart"></canvas>
+                </div>
+            </div>
+            <div id="stock-modal-transaction">
+                <div class="transaction-details">
+                    <span>Price: <strong id="stock-modal-price">$0.00</strong></span>
+                    <span>Owned: <strong id="stock-modal-owned">0</strong></span>
+                </div>
+                <div class="transaction-actions">
+                    <input type="number" id="transaction-quantity" min="1" value="1">
+                    <button id="buy-btn" class="game-button buy"><i class="fas fa-shopping-cart"></i> Buy</button>
+                    <button id="sell-btn" class="game-button sell"><i class="fas fa-hand-holding-usd"></i> Sell</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="hidden"></div>
+    
+    <audio id="buy-sound" src="sounds/buy.mp3"></audio>
+    <audio id="sell-sound" src="sounds/sell.mp3"></audio>
+    <audio id="notification-sound" src="sounds/notification.mp3"></audio>
+    <audio id="achievement-sound" src="sounds/achievement.mp3"></audio>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

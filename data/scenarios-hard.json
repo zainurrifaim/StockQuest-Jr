@@ -1,0 +1,82 @@
+[
+    { "day": 1, "news": "Welcome to the market. Early reports suggest economic uncertainty ahead.", "effects": [
+        { "target": "TECH", "change": -2.50 }, { "target": "HEALTH", "change": 1.75 }, { "target": "ENERGY", "change": -3.50 },
+        { "target": "FIN", "change": -4.25 }, { "target": "RETAIL", "change": -5.25 }, { "target": "AUTO", "change": -6.00 }
+    ]},
+    { "day": 2, "news": "Innovate Corp (INVT) announces a breakthrough, but the market worries it might be too expensive to produce.", "effects": [
+        { "target": "TECH", "change": 5.72 }, { "target": "HEALTH", "change": -1.10 }, { "target": "ENERGY", "change": -2.50 },
+        { "target": "FIN", "change": -3.50 }, { "target": "RETAIL", "change": -4.75 }, { "target": "AUTO", "change": -5.20 }
+    ]},
+    { "day": 3, "news": "Fears of a recession are growing, causing a sharp downturn in consumer-focused sectors.", "effects": [
+        { "target": "TECH", "change": -8.50 }, { "target": "HEALTH", "change": 2.50 }, { "target": "ENERGY", "change": 1.20 },
+        { "target": "FIN", "change": -15.60 }, { "target": "RETAIL", "change": -18.90 }, { "target": "AUTO", "change": -22.30 }
+    ]},
+    { "day": 4, "news": "A competitor to Vitality Inc (VITA) releases a cheaper generic drug, crushing its market share.", "effects": [
+        { "target": "TECH", "change": 2.10 }, { "target": "HEALTH", "change": -35.50 }, { "target": "ENERGY", "change": 0.80 },
+        { "target": "FIN", "change": -1.25 }, { "target": "RETAIL", "change": -2.10 }, { "target": "AUTO", "change": -4.50 }
+    ]},
+    { "day": 5, "news": "Global tensions cause a spike in oil prices, boosting Energy stocks but hurting manufacturing and retail.", "effects": [
+        { "target": "TECH", "change": -8.10 }, { "target": "HEALTH", "change": 1.40 }, { "target": "ENERGY", "change": 25.90 },
+        { "target": "FIN", "change": -5.00 }, { "target": "RETAIL", "change": -14.20 }, { "target": "AUTO", "change": -16.80 }
+    ]},
+    { "day": 6, "news": "A major factory strike hits AutoMakers (AUTO), halting all production indefinitely.", "effects": [
+        { "target": "TECH", "change": -2.20 }, { "target": "HEALTH", "change": 0.80 }, { "target": "ENERGY", "change": -1.50 },
+        { "target": "FIN", "change": -3.25 }, { "target": "RETAIL", "change": -4.15 }, { "target": "AUTO", "change": -40.90 }
+    ]},
+    { "day": 7, "news": "Major government regulations are announced for the entire Technology industry, causing widespread panic.", "effects": [
+        { "target": "TECH", "change": -30.60 }, { "target": "HEALTH", "change": 1.30 }, { "target": "ENERGY", "change": 2.10 },
+        { "target": "FIN", "change": -8.70 }, { "target": "RETAIL", "change": -10.80 }, { "target": "AUTO", "change": -12.40 }
+    ]},
+    { "day": 8, "news": "A surprising housing market boom gives the Finance industry a massive, unexpected lift.", "effects": [
+        { "target": "TECH", "change": 2.10 }, { "target": "HEALTH", "change": 1.60 }, { "target": "ENERGY", "change": -0.20 },
+        { "target": "FIN", "change": 35.50 }, { "target": "RETAIL", "change": 8.10 }, { "target": "AUTO", "change": 5.50 }
+    ]},
+    { "day": 9, "news": "The market experiences a 'dead cat bounce' as some stocks recover slightly from recent lows.", "effects": [
+        { "target": "TECH", "change": 8.50 }, { "target": "HEALTH", "change": -1.50 }, { "target": "ENERGY", "change": 3.20 },
+        { "target": "FIN", "change": -2.30 }, { "target": "RETAIL", "change": 5.80 }, { "target": "AUTO", "change": 9.50 }
+    ]},
+    { "day": 10, "news": "Disappointing sales figures from MegaMart (MMRT) send ripples of fear through the Retail sector.", "effects": [
+        { "target": "TECH", "change": -2.00 }, { "target": "HEALTH", "change": 1.50 }, { "target": "ENERGY", "change": 0.10 },
+        { "target": "FIN", "change": -4.00 }, { "target": "RETAIL", "change": -25.50 }, { "target": "AUTO", "change": -8.00 }
+    ]},
+    { "day": 11, "news": "The market is flat and unpredictable. Investors are holding their breath.", "effects": [
+        { "target": "TECH", "change": 1.80 }, { "target": "HEALTH", "change": -1.50 }, { "target": "ENERGY", "change": 2.20 },
+        { "target": "FIN", "change": -2.10 }, { "target": "RETAIL", "change": 0.40 }, { "target": "AUTO", "change": -1.90 }
+    ]},
+    { "day": 12, "news": "Vitality Inc (VITA) faces a lawsuit over one of its patents, creating uncertainty.", "effects": [
+        { "target": "TECH", "change": -0.80 }, { "target": "HEALTH", "change": -19.10 }, { "target": "ENERGY", "change": 1.20 },
+        { "target": "FIN", "change": -3.20 }, { "target": "RETAIL", "change": -2.40 }, { "target": "AUTO", "change": -1.50 }
+    ]},
+    { "day": 13, "news": "A surprise interest rate hike from the central bank hits the Finance and Automotive sectors hard.", "effects": [
+        { "target": "TECH", "change": -5.50 }, { "target": "HEALTH", "change": 2.20 }, { "target": "ENERGY", "change": 3.90 },
+        { "target": "FIN", "change": -28.40 }, { "target": "RETAIL", "change": -11.80 }, { "target": "AUTO", "change": -19.20 }
+    ]},
+    { "day": 14, "news": "A massive data breach at Secure Bank (SBNK) shakes investor confidence.", "effects": [
+        { "target": "TECH", "change": -12.60 }, { "target": "HEALTH", "change": 0.50 }, { "target": "ENERGY", "change": -1.10 },
+        { "target": "FIN", "change": -33.40 }, { "target": "RETAIL", "change": -7.80 }, { "target": "AUTO", "change": -9.20 }
+    ]},
+    { "day": 15, "news": "After a week of losses, bargain hunters enter the market, causing a slight recovery.", "effects": [
+        { "target": "TECH", "change": 14.10 }, { "target": "HEALTH", "change": 8.80 }, { "target": "ENERGY", "change": 5.50 },
+        { "target": "FIN", "change": 15.00 }, { "target": "RETAIL", "change": 13.20 }, { "target": "AUTO", "change": 14.50 }
+    ]},
+    { "day": 16, "news": "Geopolitical instability returns, spooking the markets once again. Energy stocks benefit.", "effects": [
+        { "target": "TECH", "change": -9.00 }, { "target": "HEALTH", "change": -5.50 }, { "target": "ENERGY", "change": 15.80 },
+        { "target": "FIN", "change": -12.60 }, { "target": "RETAIL", "change": -10.90 }, { "target": "AUTO", "change": -11.30 }
+    ]},
+    { "day": 17, "news": "Innovate Corp (INVT) loses a major government contract, sending its stock plummeting.", "effects": [
+        { "target": "TECH", "change": -25.00 }, { "target": "HEALTH", "change": 1.50 }, { "target": "ENERGY", "change": -0.20 },
+        { "target": "FIN", "change": -3.60 }, { "target": "RETAIL", "change": -4.90 }, { "target": "AUTO", "change": -6.30 }
+    ]},
+    { "day": 18, "news": "A surprising surge in online shopping gives a boost to Retail and Tech stocks.", "effects": [
+        { "target": "TECH", "change": 18.20 }, { "target": "HEALTH", "change": 2.80 }, { "target": "ENERGY", "change": -2.50 },
+        { "target": "FIN", "change": 4.75 }, { "target": "RETAIL", "change": 22.15 }, { "target": "AUTO", "change": 3.90 }
+    ]},
+    { "day": 19, "news": "The market is extremely volatile as traders brace for the final day.", "effects": [
+        { "target": "TECH", "change": -15.10 }, { "target": "HEALTH", "change": 9.80 }, { "target": "ENERGY", "change": -7.50 },
+        { "target": "FIN", "change": 16.00 }, { "target": "RETAIL", "change": -14.20 }, { "target": "AUTO", "change": 15.50 }
+    ]},
+    { "day": 20, "news": "A turbulent final day sees wild swings across the board. Check your portfolio!", "effects": [
+        { "target": "TECH", "change": 22.00 }, { "target": "HEALTH", "change": -18.00 }, { "target": "ENERGY", "change": 17.50 },
+        { "target": "FIN", "change": -11.00 }, { "target": "RETAIL", "change": 19.00 }, { "target": "AUTO", "change": -12.00 }
+    ]}
+]
