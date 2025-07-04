@@ -113,12 +113,26 @@
         </div>
     </div>
 
+    <div id="news-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-auto">
+            <div id="news-modal-content">
+                <h2 id="news-modal-headline" class="text-2xl font-bold mb-2 text-gray-800"></h2>
+                <p id="news-modal-prediction" class="text-lg text-blue-600 italic mb-4"></p>
+                <p id="news-modal-rumor" class="text-md text-gray-600"></p>
+            </div>
+            <div class="text-right mt-4">
+                <button id="close-news-modal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
     <div id="notification" class="hidden"></div>
     
-    <audio id="buy-sound" src="sounds/buy.mp3"></audio>
-    <audio id="sell-sound" src="sounds/sell.mp3"></audio>
-    <audio id="notification-sound" src="sounds/notification.mp3"></audio>
-    <audio id="achievement-sound" src="sounds/achievement.mp3"></audio>
+    <audio id="buy-sound" src="assets/sounds/buy.mp3"></audio>
+    <audio id="sell-sound" src="assets/sounds/sell.mp3"></audio>
+    <audio id="notification-sound" src="assets/sounds/notification.mp3"></audio>
+    <audio id="achievement-sound" src="assets/sounds/achievement.mp3"></audio>
 
     <script type="module" src="js/main.js"></script>
     <script src="js/components.js"></script>

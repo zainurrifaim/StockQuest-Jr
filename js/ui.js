@@ -28,6 +28,42 @@ const buyBtn = document.getElementById('buy-btn');
 const sellBtn = document.getElementById('sell-btn');
 const transactionQuantityInput = document.getElementById('transaction-quantity');
 
+// --- News Modal Functions ---
+
+function toggleNewsModal(show) {
+    const modal = document.getElementById('news-modal');
+    if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+function showNewsDetail(newsItem) {
+    document.getElementById('news-modal-headline').textContent = newsItem.headline || 'No Headline';
+
+    const predictionEl = document.getElementById('news-modal-prediction');
+    if (newsItem.prediction) {
+        predictionEl.innerHTML = `<strong class="text-blue-700">Prediction:</strong> ${newsItem.prediction}`;
+        predictionEl.classList.remove('hidden');
+    } else {
+        predictionEl.classList.add('hidden');
+    }
+
+    const rumorEl = document.getElementById('news-modal-rumor');
+    if (newsItem.rumor) {
+        rumorEl.innerHTML = `<strong class="text-gray-700">Rumor:</strong> ${newsItem.rumor}`;
+        rumorEl.classList.remove('hidden');
+    } else {
+        rumorEl.classList.add('hidden');
+    }
+
+    toggleNewsModal(true);
+}
+
+// --- Main UI Functions ---
 
 function initializeUI(stockSelectHandler, buyHandler, sellHandler) {
     stockMarketListEl.addEventListener('click', (e) => {
@@ -60,8 +96,21 @@ function initializeUI(stockSelectHandler, buyHandler, sellHandler) {
     nextDayBtn.addEventListener('mouseleave', () => {
         nextDayBtn.classList.remove('animate-pulse-fast');
     });
-}
 
+    const closeNewsBtn = document.getElementById('close-news-modal');
+    if (closeNewsBtn) {
+        closeNewsBtn.addEventListener('click', () => toggleNewsModal(false));
+    }
+
+    const newsModalOverlay = document.getElementById('news-modal');
+    if (newsModalOverlay) {
+        newsModalOverlay.addEventListener('click', (event) => {
+            if (event.target === newsModalOverlay) {
+                toggleNewsModal(false);
+            }
+        });
+    }
+}
 
 function updatePortfolio(portfolioData) {
     cashEl.textContent = formatCurrency(portfolioData.cash);
@@ -107,9 +156,7 @@ function updatePortfolioChart(portfolioData) {
             datasets: [{
                 label: 'Portfolio Distribution',
                 data: data,
-                backgroundColor: [
-                    '#4ade80', '#fbbf24', '#60a5fa', '#f87171', '#c084fc', '#facc15', '#a3e635'
-                ],
+                backgroundColor: ['#4ade80', '#fbbf24', '#60a5fa', '#f87171', '#c084fc', '#facc15', '#a3e635'],
                 hoverOffset: 4
             }]
         },
@@ -117,19 +164,12 @@ function updatePortfolioChart(portfolioData) {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: {
-                    display: labels.length > 1, // Only show legend if there's data
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Portfolio Diversity'
-                }
+                legend: { display: labels.length > 1, position: 'top' },
+                title: { display: true, text: 'Portfolio Diversity' }
             }
         }
     });
 }
-
 
 function updateStockMarket(stocks) {
     stockMarketListEl.innerHTML = '';
@@ -138,8 +178,7 @@ function updateStockMarket(stocks) {
         stockEl.className = 'stock-card';
         stockEl.dataset.id = stock.id; 
 
-        // **FIX:** Detailed price change indicator logic
-        let priceChangeColor = 'text-gray-500'; // Neutral
+        let priceChangeColor = 'text-gray-500';
         if (stock.change > 0) priceChangeColor = 'text-green-500';
         if (stock.change < 0) priceChangeColor = 'text-red-500';
 
@@ -164,13 +203,38 @@ function updateStockMarket(stocks) {
     });
 }
 
-function updateNewsFeed(event) {
+/**
+ * Updates the news feed to show ONLY the current day's news.
+ * @param {object} newsItem - The structured news object for the current day.
+ * @param {number} day - The current day number.
+ */
+function updateNewsFeed(newsItem, day) {
+    // ===== THIS IS THE KEY CHANGE =====
+    // Clear the news feed before adding the new item.
     newsFeedEl.innerHTML = '';
-    if (event) {
-        newsFeedEl.innerHTML = `<p><i class="fas fa-newspaper mr-2"></i>${event.description}</p>`;
+    // ===================================
+
+    const article = document.createElement('div');
+    article.className = 'news-article p-3 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-gray-200 transition-colors duration-200';
+    
+    let headlineText = `Day ${day}: `;
+    
+    if (typeof newsItem === 'string') {
+        headlineText += newsItem;
     } else {
-        newsFeedEl.innerHTML = '<p class="text-gray-500">No major news today. A calm day in the markets.</p>';
+        headlineText += newsItem.headline;
     }
+
+    article.innerHTML = `<p class="font-semibold text-gray-800">${headlineText}</p>`;
+    
+    article.addEventListener('click', () => {
+        if (typeof newsItem !== 'string') {
+            showNewsDetail(newsItem);
+        }
+    });
+    
+    // Now just append the single article to the empty feed.
+    newsFeedEl.appendChild(article);
 }
 
 function updateDay(day) {
@@ -193,7 +257,6 @@ function updateAchievements() {
     }
 }
 
-
 function openStockModal(stock, portfolioStock) {
     stockModalName.textContent = `${stock.name} (${stock.ticker})`;
     stockModalDesc.textContent = stock.description;
@@ -208,7 +271,6 @@ function openStockModal(stock, portfolioStock) {
     stockChartInstance = new Chart(chartCtx, {
         type: 'line',
         data: {
-            // **FIX:** Ensure chart labels are correct
             labels: stock.history.map(h => `Day ${h.day}`),
             datasets: [{
                 label: 'Price History',
@@ -236,8 +298,8 @@ function closeStockModal() {
 
 function showNotification(message, type = 'success') {
     notificationEl.textContent = message;
-    notificationEl.className = 'notification'; // Use a base class
-    notificationEl.classList.add(type); // Add type class ('success' or 'error')
+    notificationEl.className = 'notification';
+    notificationEl.classList.add(type);
     notificationEl.classList.remove('hidden');
 
     setTimeout(() => {
@@ -245,15 +307,12 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
-
 function formatCurrency(amount) {
-    // Handle potential non-numeric values gracefully
     if (typeof amount !== 'number') {
         return '$0.00';
     }
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
 }
-
 
 export {
     initializeUI,
