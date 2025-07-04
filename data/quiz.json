@@ -1,0 +1,115 @@
+{
+  "quizTitle": "StockQuest Jr. Knowledge Challenge!",
+  "questions": [
+    {
+      "question": "If a company is a big pizza 🍕, what is a 'stock'?",
+      "options": [
+        "The whole pizza",
+        "A tiny slice of the pizza",
+        "The pizza box",
+        "The delivery driver"
+      ],
+      "correctAnswer": 1,
+      "feedback": "A stock is like owning a small slice of the company. The more slices you have, the more of the company you own."
+    },
+    {
+      "question": "Why would a company sell stocks?",
+      "options": [
+        "Because they have too much money",
+        "To give away free products",
+        "To get money to grow bigger and create new things",
+        "To have a big party"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Companies sell stocks to raise money for exciting projects, like building a new factory or inventing a cool new toy."
+    },
+    {
+      "question": "What does 'diversification' mean? 🤔",
+      "options": [
+        "Putting all your money in your favorite company",
+        "Hiding your money under your bed",
+        "Only buying stocks on a Tuesday",
+        "Spreading your money across many different stocks"
+      ],
+      "correctAnswer": 3,
+      "feedback": "It's the idea of 'not putting all your eggs in one basket.' Diversifying is a smart way to lower your risk."
+    },
+    {
+      "question": "A news report says 'RoboCorp's new jetpack is a huge success!'. What will likely happen to its stock price? 📈",
+      "options": [
+        "It will go down",
+        "It will stay the same",
+        "It will go up",
+        "It will disappear"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Good news and popular products usually make more people want to buy a stock, which drives the price up."
+    },
+    {
+      "question": "What is a 'portfolio'?",
+      "options": [
+        "A type of suitcase",
+        "A fancy photo album",
+        "A collection of all the different stocks you own",
+        "The name of a company"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Your portfolio is your personal collection of investments, like a treasure chest for all your stocks."
+    },
+    {
+      "question": "What is a 'ticker symbol'?",
+      "options": [
+        "A secret code to unlock a game",
+        "A short nickname for a stock on the market (like AAPL for Apple)",
+        "A sticker you get for buying a stock",
+        "A button that makes a ticking sound"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Ticker symbols are short and easy-to-type nicknames for companies on the stock market."
+    },
+    {
+      "question": "What is a 'Bull Market' 🐂?",
+      "options": [
+        "A market that sells bulls",
+        "A time when most stock prices are going DOWN",
+        "A time when most stock prices are going UP",
+        "A very slow market"
+      ],
+      "correctAnswer": 2,
+      "feedback": "A bull market is when the market is strong and prices are generally rising. Think of a bull charging forward!"
+    },
+    {
+      "question": "And what about a 'Bear Market' 🐻?",
+      "options": [
+        "A market where you can buy teddy bears",
+        "A time when most stock prices are going DOWN",
+        "A time when most stock prices are going UP",
+        "A very fast market"
+      ],
+      "correctAnswer": 1,
+      "feedback": "A bear market is when the market is weak and prices are generally falling. Think of a bear hibernating."
+    },
+    {
+      "question": "What is a 'dividend'?",
+      "options": [
+        "A math problem",
+        "A penalty for losing money",
+        "A small bonus payment from a company to its shareholders",
+        "A type of vegetable"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Some companies share their profits with shareholders by giving them a dividend, which is like a small cash reward for being an owner."
+    },
+    {
+      "question": "What's the #1 rule of investing?",
+      "options": [
+        "Only buy stocks with cool names",
+        "Never sell a stock",
+        "Don't be afraid to lose, but aim to learn!",
+        "Buy what your friends buy"
+      ],
+      "correctAnswer": 2,
+      "feedback": "The goal is to learn how the market works. Every decision, win or lose, is a learning opportunity. Great job!"
+    }
+  ]
+}

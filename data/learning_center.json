@@ -1,0 +1,85 @@
+{
+  "lessons": [
+    {
+      "id": "what-is-a-stock",
+      "title": "What is a Stock? slice of the Pie! 🍰",
+      "content": [
+        "Imagine a big, yummy pie. That pie is a company (like a toy company or a video game company).",
+        "A 'stock' is like getting a tiny slice of that pie. When you own a stock, you own a small piece of the company! This makes you a 'shareholder'."
+      ],
+      "interactive_example": {
+        "title": "Let's Pretend!",
+        "scenario": "Imagine we start a lemonade stand. We need $10 to buy lemons and sugar. We can sell 10 'shares' for $1 each. If you buy one share, you own 1/10th of our lemonade stand! If our stand makes money, your share becomes worth more."
+      },
+      "external_links": [
+        {
+          "name": "Kids Finance - What is a Stock?",
+          "url": "https://kids.kiddle.co/Stock"
+        }
+      ]
+    },
+    {
+      "id": "why-companies-sell-stocks",
+      "title": "Why Sell Slices of the Pie?",
+      "content": [
+        "Companies sell stocks to raise money. They can use this money to do cool things, like invent new products, build bigger factories, or hire more people.",
+        "It's like when we sold shares in our lemonade stand to get money for lemons. The company gets the money it needs to grow, and you get to own a part of it!"
+      ],
+      "interactive_example": {
+        "title": "Game Company Goals",
+        "scenario": "A game company wants to create a new video game, but they need $1,000,000. They can sell 100,000 shares for $10 each to raise the money. Now they can build their awesome new game!"
+      },
+      "external_links": [
+        {
+          "name": "Investopedia - Why Companies Issue Stock",
+          "url": "https://www.investopedia.com/terms/s/stockmarket.asp#:~:text=Companies%20issue%20shares%20on%20the,shares%20at%20a%20higher%20price."
+        }
+      ]
+    },
+    {
+      "id": "how-prices-change",
+      "title": "The Price Rollercoaster 🎢",
+      "content": [
+        "The price of a stock goes up and down. This is called 'volatility'.",
+        "If a lot of people want to buy a stock (high demand), the price goes up. If a lot of people want to sell it (low demand), the price goes down.",
+        "Good news about a company (like record sales) usually makes the price go up. Bad news (like a failed product) can make it go down."
+      ],
+      "interactive_example": {
+        "title": "News Flash!",
+        "scenario": "In your game, you see a news event: 'RoboCorp Inc. just released a new super-fast robot!'. What do you think will happen to their stock price? It will probably go up because people are excited about the new robot!"
+      },
+      "external_links": []
+    },
+    {
+      "id": "what-is-a-portfolio",
+      "title": "Your Treasure Chest of Stocks 💎",
+      "content": [
+        "A portfolio is just a collection of all the different stocks you own. Think of it like a treasure chest or a sticker book.",
+        "Instead of gold coins or stickers, your portfolio holds all your different shares from different companies."
+      ],
+      "interactive_example": {
+        "title": "Build Your Portfolio",
+        "scenario": "Let's say you own 5 shares of 'GameFun' and 10 shares of 'CandyCorp'. Your portfolio contains both of these investments. In the game, your dashboard shows you your portfolio."
+      },
+      "external_links": []
+    },
+    {
+      "id": "diversification",
+      "title": "Don't Put All Your Eggs in One Basket! 🥚",
+      "content": [
+        "'Diversification' is a fancy word for not putting all your money into just one stock. It's smarter to buy small amounts of many different stocks from different industries (like technology, food, and cars).",
+        "Why? If one company does poorly, you won't lose all your money because your other stocks might be doing great! This lowers your risk."
+      ],
+      "interactive_example": {
+        "title": "Smart Investing",
+        "scenario": "You have $100. Is it smarter to put all $100 into one video game stock, or put $25 into a game stock, $25 into a food company, $25 into a car company, and $25 into a toy company? The second option is diversified and safer!"
+      },
+      "external_links": [
+        {
+          "name": "Warren Buffett's Advice for Kids",
+          "url": "https://youtu.be/ffOprG9kwV0?si=IuhePXfUIuzA_B-D"
+        }
+      ]
+    }
+  ]
+}

@@ -16,35 +16,46 @@
 
     <div id="navbar-container"></div>
 
-    <main class="container mx-auto p-4 md:p-6 flex-grow">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6 game-title">Learning Center</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-8">
+            <header class="text-center mb-10">
+                <h1 class="text-5xl font-bold text-gray-800">Learning Center</h1>
+                <p class="text-xl text-gray-600 mt-2">Your journey to becoming a trading expert starts here!</p>
+            </header>
 
-            <div class="card">
-                <h2 class="card-title text-2xl mb-2"><i class="fas fa-chart-line text-blue-500 mr-2"></i>What is a Stock?</h2>
-                <p>Learn the basics of what stocks are, why companies issue them, and what it means to be a shareholder.</p>
+            <div class="mb-8">
+                <div class="border-b border-gray-300">
+                    <nav class="-mb-px flex justify-center space-x-6" aria-label="Tabs">
+                        <button id="lessons-tab" class="tab-btn active-tab">
+                            Lessons 🚀
+                        </button>
+                        <button id="glossary-tab" class="tab-btn">
+                            Glossary 📚
+                        </button>
+                    </nav>
+                </div>
             </div>
 
-            <div class="card">
-                <h2 class="card-title text-2xl mb-2"><i class="fas fa-balance-scale text-green-500 mr-2"></i>Risk vs. Reward</h2>
-                <p>Understand the fundamental concept of risk in investing and how it relates to potential returns.</p>
-            </div>
+            <div>
+                <div id="lessons-panel" class="tab-panel">
+                    <div id="lessons-container" class="space-y-6">
+                        <p class="text-center text-gray-500">Loading lessons...</p>
+                    </div>
+                </div>
 
-            <div class="card">
-                <h2 class="card-title text-2xl mb-2"><i class="fas fa-seedling text-yellow-500 mr-2"></i>Building a Portfolio</h2>
-                <p>Discover why it's important not to put all your eggs in one basket through diversification.</p>
+                <div id="glossary-panel" class="tab-panel" style="display: none;">
+                    <div id="glossary-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                         <p class="text-center text-gray-500">Loading glossary...</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="card">
-                <h2 class="card-title text-2xl mb-2"><i class="fas fa-newspaper text-orange-500 mr-2"></i>Reading the News</h2>
-                <p>Learn how world events and company news can affect the price of your stocks.</p>
-            </div>
-
         </div>
     </main>
+
 
     <div id="footer-container"></div>
 
     <script src="js/components.js"></script>
+    <script src="js/learning.js"></script>
 </body>
 </html>

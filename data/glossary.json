@@ -1,0 +1,17 @@
+{
+  "glossary": {
+    "Stock": "A share of ownership in a company.",
+    "Share": "A single unit of a company's stock. It's your piece of the pie!",
+    "Shareholder": "A person who owns shares (stock) in a company.",
+    "Stock Market": "A place where stocks are bought and sold. Think of it as a giant market for company shares.",
+    "Ticker Symbol": "A short, unique code for a stock. For example, Apple Inc. is AAPL.",
+    "Portfolio": "A collection of all the stocks and other investments you own.",
+    "Diversification": "Spreading your money across different investments to reduce risk. Don't put all your eggs in one basket!",
+    "Dividend": "A small payment that some companies give to their shareholders from their profits.",
+    "Bull Market": "A time when stock prices are generally rising. 🐂",
+    "Bear Market": "A time when stock prices are generally falling. 🐻",
+    "Volatility": "How quickly and how much a stock's price goes up and down.",
+    "Industry": "A group of companies that make similar products or offer similar services (e.g., the 'video game industry').",
+    "IPO (Initial Public Offering)": "The very first time a private company sells its stock to the public to become a 'publicly-traded company'."
+  }
+}
