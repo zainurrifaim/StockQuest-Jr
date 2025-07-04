@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-blue-50">
@@ -36,46 +37,47 @@
 
             <div class="lg:col-span-1 flex flex-col gap-6">
                 <div class="card" id="portfolio-card">
-                    <h2 class="card-title"><i class="fas fa-wallet text-yellow-500"></i> My Portfolio</h2>
+                    <h2 class="card-title"><i class="fas fa-wallet text-yellow-500" title="Your Portfolio"></i> My Portfolio</h2>
                     <div class="portfolio-stats">
                         <div class="stat-item">
-                            <span><i class="fas fa-money-bill-wave text-green-500"></i> Cash:</span>
+                            <span><i class="fas fa-money-bill-wave text-green-500" title="Available Cash"></i> Cash:</span>
                             <span id="portfolio-cash">$10,000.00</span>
                         </div>
                         <div class="stat-item total-wealth">
-                            <span><i class="fas fa-gem text-blue-500"></i> Total Wealth:</span>
+                            <span><i class="fas fa-gem text-blue-500" title="Total net worth including stocks"></i> Total Wealth:</span>
                             <span id="total-wealth">$10,000.00</span>
                         </div>
                     </div>
-                    <div id="portfolio-stocks">
-                        </div>
+                    <div id="portfolio-stocks"></div>
+                    <div id="portfolio-chart-container" class="mt-4">
+                        <canvas id="portfolio-pie-chart"></canvas>
+                    </div>
                 </div>
 
                 <div class="card" id="news-card">
-                    <h2 class="card-title"><i class="fas fa-newspaper text-orange-500"></i> Today's News</h2>
+                    <h2 class="card-title"><i class="fas fa-newspaper text-orange-500" title="Latest financial news"></i> Today's News</h2>
                     <div id="news-feed"></div>
                 </div>
             </div>
 
             <div class="lg:col-span-2 card" id="market-card">
-                <h2 class="card-title"><i class="fas fa-store text-indigo-500"></i> Stock Market</h2>
-                <div id="stock-market-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    </div>
+                <h2 class="card-title"><i class="fas fa-store text-indigo-500" title="Stock Market"></i> Stock Market</h2>
+                <div id="stock-market-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4"></div>
+                
+                <div id="actions-container" class="mt-6">
+                    <button id="next-day-btn" class="game-button next-day">
+                        <i class="fas fa-forward"></i> Next Day
+                    </button>
+                    <button id="restart-btn" class="game-button restart hidden">
+                        <i class="fas fa-redo"></i> Restart Game
+                    </button>
+                </div>
             </div>
 
         </main>
 
-        <footer id="game-footer" class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-            <div class="card md:col-span-1" id="actions-card">
-                 <h2 class="card-title"><i class="fas fa-cogs text-gray-500"></i> Controls</h2>
-                <button id="next-day-btn" class="game-button next-day">
-                    <i class="fas fa-forward"></i> Next Day
-                </button>
-                <button id="restart-btn" class="game-button restart hidden">
-                    <i class="fas fa-redo"></i> Restart
-                </button>
-            </div>
-            <div class="card md:col-span-2" id="achievements-card">
+        <footer id="game-footer" class="mt-6">
+            <div class="card md:col-span-3" id="achievements-card">
                 <h2 class="card-title"><i class="fas fa-trophy text-yellow-400"></i> Achievements</h2>
                 <ul id="achievements-list"></ul>
             </div>

@@ -1,82 +1,94 @@
 [
-    { "day": 1, "news": "Welcome! The market is stable today.", "effects": [
-        { "target": "TECH", "change": 1.50 }, { "target": "HEALTH", "change": -0.75 }, { "target": "ENERGY", "change": 0.50 },
-        { "target": "FIN", "change": 1.25 }, { "target": "RETAIL", "change": -0.25 }, { "target": "AUTO", "change": 1.00 }
-    ]},
-    { "day": 2, "news": "Innovate Corp (INVT) announces a popular new gadget! Stock prices are soaring.", "effects": [
-        { "target": "TECH", "change": 15.72 }, { "target": "HEALTH", "change": 1.10 }, { "target": "ENERGY", "change": -0.50 },
-        { "target": "FIN", "change": 2.50 }, { "target": "RETAIL", "change": 0.75 }, { "target": "AUTO", "change": 1.20 }
-    ]},
-    { "day": 3, "news": "The whole market is feeling optimistic! A widespread, gentle rally lifts most stocks.", "effects": [
-        { "target": "TECH", "change": 3.50 }, { "target": "HEALTH", "change": 2.50 }, { "target": "ENERGY", "change": 4.20 },
-        { "target": "FIN", "change": 3.60 }, { "target": "RETAIL", "change": 2.90 }, { "target": "AUTO", "change": 4.30 }
-    ]},
-    { "day": 4, "news": "Vitality Inc (VITA) gets approval for a new life-saving drug. A great day for healthcare!", "effects": [
-        { "target": "TECH", "change": 1.10 }, { "target": "HEALTH", "change": 22.50 }, { "target": "ENERGY", "change": 0.80 },
-        { "target": "FIN", "change": 0.25 }, { "target": "RETAIL", "change": 0.10 }, { "target": "AUTO", "change": -0.50 }
-    ]},
-    { "day": 5, "news": "Power Grid Co (GRID) reports higher than expected profits, boosting the energy sector.", "effects": [
-        { "target": "TECH", "change": 0.50 }, { "target": "HEALTH", "change": -0.20 }, { "target": "ENERGY", "change": 12.90 },
-        { "target": "FIN", "change": 1.00 }, { "target": "RETAIL", "change": -0.50 }, { "target": "AUTO", "change": 0.80 }
-    ]},
-    { "day": 6, "news": "A famous investor praises Secure Bank (SBNK), leading to a jump in its value.", "effects": [
-        { "target": "TECH", "change": 1.20 }, { "target": "HEALTH", "change": 0.80 }, { "target": "ENERGY", "change": 0.50 },
-        { "target": "FIN", "change": 18.25 }, { "target": "RETAIL", "change": 1.15 }, { "target": "AUTO", "change": 0.90 }
-    ]},
-    { "day": 7, "news": "MegaMart (MMRT) announces expansion into new countries, exciting investors.", "effects": [
-        { "target": "TECH", "change": -0.50 }, { "target": "HEALTH", "change": 0.30 }, { "target": "ENERGY", "change": 0.10 },
-        { "target": "FIN", "change": 0.70 }, { "target": "RETAIL", "change": 14.80 }, { "target": "AUTO", "change": 0.40 }
-    ]},
-    { "day": 8, "news": "AutoMakers (AUTO) reveals a new, very popular electric car. Their stock is racing ahead!", "effects": [
-        { "target": "TECH", "change": 1.10 }, { "target": "HEALTH", "change": 0.60 }, { "target": "ENERGY", "change": -0.20 },
-        { "target": "FIN", "change": 1.80 }, { "target": "RETAIL", "change": 2.10 }, { "target": "AUTO", "change": 25.50 }
-    ]},
-    { "day": 9, "news": "Minor software bug found in Innovate Corp (INVT) products. A small dip in price is expected.", "effects": [
-        { "target": "TECH", "change": -7.50 }, { "target": "HEALTH", "change": 0.50 }, { "target": "ENERGY", "change": 1.20 },
-        { "target": "FIN", "change": 0.30 }, { "target": "RETAIL", "change": 0.80 }, { "target": "AUTO", "change": 1.50 }
-    ]},
-    { "day": 10, "news": "The economy is looking strong! The Technology and Finance sectors see major gains.", "effects": [
-        { "target": "TECH", "change": 12.00 }, { "target": "HEALTH", "change": 2.50 }, { "target": "ENERGY", "change": 3.10 },
-        { "target": "FIN", "change": 15.00 }, { "target": "RETAIL", "change": 4.50 }, { "target": "AUTO", "change": 5.00 }
-    ]},
-    { "day": 11, "news": "A calm day. Most stocks see small, steady gains.", "effects": [
-        { "target": "TECH", "change": 1.80 }, { "target": "HEALTH", "change": 1.50 }, { "target": "ENERGY", "change": 1.20 },
-        { "target": "FIN", "change": 2.10 }, { "target": "RETAIL", "change": 1.40 }, { "target": "AUTO", "change": 1.90 }
-    ]},
-    { "day": 12, "news": "New government subsidies for green energy give Power Grid Co (GRID) a sunny outlook.", "effects": [
-        { "target": "TECH", "change": 0.80 }, { "target": "HEALTH", "change": -0.10 }, { "target": "ENERGY", "change": 19.80 },
-        { "target": "FIN", "change": 1.20 }, { "target": "RETAIL", "change": 0.40 }, { "target": "AUTO", "change": -2.50 }
-    ]},
-    { "day": 13, "news": "MegaMart (MMRT) reports record-breaking sales figures for the quarter!", "effects": [
-        { "target": "TECH", "change": 1.50 }, { "target": "HEALTH", "change": 1.20 }, { "target": "ENERGY", "change": 0.90 },
-        { "target": "FIN", "change": 2.30 }, { "target": "RETAIL", "change": 21.40 }, { "target": "AUTO", "change": 1.80 }
-    ]},
-    { "day": 14, "news": "AutoMakers (AUTO) partners with Innovate Corp (INVT), boosting both companies.", "effects": [
-        { "target": "TECH", "change": 14.60 }, { "target": "HEALTH", "change": 0.50 }, { "target": "ENERGY", "change": 1.10 },
-        { "target": "FIN", "change": 3.40 }, { "target": "RETAIL", "change": 2.80 }, { "target": "AUTO", "change": 18.20 }
-    ]},
-    { "day": 15, "news": "A slight market dip as some investors sell stocks to take profits. Nothing to worry about.", "effects": [
-        { "target": "TECH", "change": -4.10 }, { "target": "HEALTH", "change": -2.80 }, { "target": "ENERGY", "change": -3.50 },
-        { "target": "FIN", "change": -5.00 }, { "target": "RETAIL", "change": -3.20 }, { "target": "AUTO", "change": -4.50 }
-    ]},
-    { "day": 16, "news": "Vitality Inc (VITA) announces a successful trial for a new anti-aging cream.", "effects": [
-        { "target": "TECH", "change": 1.00 }, { "target": "HEALTH", "change": 28.00 }, { "target": "ENERGY", "change": -0.50 },
-        { "target": "FIN", "change": 2.00 }, { "target": "RETAIL", "change": 1.50 }, { "target": "AUTO", "change": 0.80 }
-    ]},
-    { "day": 17, "news": "The entire market rallies on positive economic news from around the world!", "effects": [
-        { "target": "TECH", "change": 8.00 }, { "target": "HEALTH", "change": 6.50 }, { "target": "ENERGY", "change": 7.20 },
-        { "target": "FIN", "change": 9.60 }, { "target": "RETAIL", "change": 7.90 }, { "target": "AUTO", "change": 8.30 }
-    ]},
-    { "day": 18, "news": "Secure Bank (SBNK) launches a new, popular mobile payment app, attracting many new customers.", "effects": [
-        { "target": "TECH", "change": 4.20 }, { "target": "HEALTH", "change": 1.80 }, { "target": "ENERGY", "change": 2.50 },
-        { "target": "FIN", "change": 24.75 }, { "target": "RETAIL", "change": 3.15 }, { "target": "AUTO", "change": 2.90 }
-    ]},
-    { "day": 19, "news": "Anticipation builds for the final day of trading, leading to widespread positive sentiment.", "effects": [
-        { "target": "TECH", "change": 5.10 }, { "target": "HEALTH", "change": 4.80 }, { "target": "ENERGY", "change": 3.50 },
-        { "target": "FIN", "change": 6.00 }, { "target": "RETAIL", "change": 4.20 }, { "target": "AUTO", "change": 5.50 }
-    ]},
-    { "day": 20, "news": "A fantastic final day! The market finishes with a strong rally. Congratulations, trader!", "effects": [
-        { "target": "TECH", "change": 10.00 }, { "target": "HEALTH", "change": 8.00 }, { "target": "ENERGY", "change": 7.50 },
-        { "target": "FIN", "change": 11.00 }, { "target": "RETAIL", "change": 9.00 }, { "target": "AUTO", "change": 12.00 }
-    ]}
+  {
+    "day": 1,
+    "news": "Innovate Corp (INVT) announces a breakthrough in AI research, exciting investors.",
+    "effects": [{ "target": "TECH", "change": 5.50 }]
+  },
+  {
+    "day": 2,
+    "news": "Government announces new subsidies for green energy. Power Grid Co (GRID) stands to benefit.",
+    "effects": [{ "target": "ENERGY", "change": 4.75 }]
+  },
+  {
+    "day": 3,
+    "news": "Vitality Inc (VITA) gets approval for a new blockbuster drug. Healthcare stocks rally.",
+    "effects": [{ "target": "HEALTH", "change": 6.25 }]
+  },
+  {
+    "day": 4,
+    "news": "AutoMakers (AUTO) reveals a new, affordable electric car, receiving rave reviews.",
+    "effects": [{ "target": "AUTO", "change": 7.00 }]
+  },
+  {
+    "day": 5,
+    "news": "MegaMart (MMRT) reports record sales for the quarter, beating all expectations.",
+    "effects": [{ "target": "RETAIL", "change": 3.50 }]
+  },
+  {
+    "day": 6,
+    "news": "A minor software bug at Innovate Corp (INVT) causes a small, temporary dip in stock price.",
+    "effects": [{ "target": "TECH", "change": -2.75 }]
+  },
+  {
+    "day": 7,
+    "news": "Secure Bank (SBNK) releases a positive earnings report, boosting the financial sector.",
+    "effects": [{ "target": "FIN", "change": 5.00 }]
+  },
+  {
+    "day": 8,
+    "news": "Good economic news! Consumer spending is up, giving a small boost to all sectors.",
+    "effects": [
+        { "target": "TECH", "change": 2.00 },
+        { "target": "HEALTH", "change": 1.50 },
+        { "target": "ENERGY", "change": 1.75 },
+        { "target": "FIN", "change": 2.25 },
+        { "target": "RETAIL", "change": 2.50 },
+        { "target": "AUTO", "change": 1.80 }
+    ]
+  },
+  {
+    "day": 9,
+    "news": "A competitor to AutoMakers (AUTO) announces delays, making AUTO look more reliable.",
+    "effects": [{ "target": "AUTO", "change": 4.20 }]
+  },
+  {
+    "day": 10,
+    "news": "Vitality Inc (VITA) partners with a tech company to improve medical diagnostics.",
+    "effects": [
+        { "target": "HEALTH", "change": 4.50 },
+        { "target": "TECH", "change": 3.00 }
+    ]
+  },
+  {
+    "day": 12,
+    "news": "MegaMart (MMRT) announces a plan to expand into new cities, a good sign for future growth.",
+    "effects": [{ "target": "RETAIL", "change": 4.00 }]
+  },
+  {
+    "day": 14,
+    "news": "Interest rates are stable, which is generally good news for banks like Secure Bank (SBNK).",
+    "effects": [{ "target": "FIN", "change": 3.75 }]
+  },
+  {
+    "day": 16,
+    "news": "Power Grid Co (GRID) invests in upgrading its infrastructure, a smart long-term move.",
+    "effects": [{ "target": "ENERGY", "change": 3.25 }]
+  },
+  {
+    "day": 18,
+    "news": "A famous tech influencer praises Innovate Corp's (INVT) new products.",
+    "effects": [{ "target": "TECH", "change": 5.80 }]
+  },
+  {
+    "day": 20,
+    "news": "The market is optimistic about the future! A final day rally boosts almost all stocks.",
+    "effects": [
+        { "target": "TECH", "change": 3.00 },
+        { "target": "HEALTH", "change": 2.50 },
+        { "target": "ENERGY", "change": 2.00 },
+        { "target": "FIN", "change": 3.50 },
+        { "target": "RETAIL", "change": 2.75 },
+        { "target": "AUTO", "change": -1.50 }
+    ]
+  }
 ]

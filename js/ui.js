@@ -2,9 +2,9 @@
 import { getStockById } from './stock.js';
 import { getAchievements } from './achievements.js';
 
-let activeStockId = null; // To keep track of the stock in the modal
-let transactionCallback = null; // To handle buy/sell actions
-let chartInstance = null;
+let activeStockId = null;
+let stockChartInstance = null;
+let portfolioChartInstance = null;
 
 // --- DOM Elements ---
 const cashEl = document.getElementById('portfolio-cash');
@@ -15,6 +15,7 @@ const newsFeedEl = document.getElementById('news-feed');
 const currentDayEl = document.getElementById('current-day');
 const achievementsListEl = document.getElementById('achievements-list');
 const notificationEl = document.getElementById('notification');
+const nextDayBtn = document.getElementById('next-day-btn');
 
 // Modal Elements
 const stockModal = document.getElementById('stock-modal');
@@ -28,21 +29,17 @@ const sellBtn = document.getElementById('sell-btn');
 const transactionQuantityInput = document.getElementById('transaction-quantity');
 
 
-// --- Main UI Initialization ---
 function initializeUI(stockSelectHandler, buyHandler, sellHandler) {
-    // When a stock card in the market is clicked
     stockMarketListEl.addEventListener('click', (e) => {
         const stockCard = e.target.closest('.stock-card');
         if (stockCard) {
             activeStockId = stockCard.dataset.id;
-            stockSelectHandler(activeStockId); // Let main.js know which stock to open
+            stockSelectHandler(activeStockId);
         }
     });
 
-    // Modal close button
     closeModalBtn.addEventListener('click', closeStockModal);
 
-    // Modal transaction buttons
     buyBtn.addEventListener('click', () => {
         const quantity = parseInt(transactionQuantityInput.value, 10);
         if (quantity > 0) {
@@ -56,9 +53,15 @@ function initializeUI(stockSelectHandler, buyHandler, sellHandler) {
             sellHandler(activeStockId, quantity);
         }
     });
+    
+    nextDayBtn.addEventListener('mouseenter', () => {
+        nextDayBtn.classList.add('animate-pulse-fast');
+    });
+    nextDayBtn.addEventListener('mouseleave', () => {
+        nextDayBtn.classList.remove('animate-pulse-fast');
+    });
 }
 
-// --- UI Update Functions ---
 
 function updatePortfolio(portfolioData) {
     cashEl.textContent = formatCurrency(portfolioData.cash);
@@ -81,25 +84,70 @@ function updatePortfolio(portfolioData) {
             portfolioStocksEl.appendChild(stockEl);
         });
     }
+    
+    updatePortfolioChart(portfolioData);
 }
+
+function updatePortfolioChart(portfolioData) {
+    const chartCtx = document.getElementById('portfolio-pie-chart').getContext('2d');
+    const labels = portfolioData.stocks.map(s => s.ticker);
+    const data = portfolioData.stocks.map(s => s.price * s.quantity);
+    
+    labels.push('Cash');
+    data.push(portfolioData.cash);
+    
+    if (portfolioChartInstance) {
+        portfolioChartInstance.destroy();
+    }
+    
+    portfolioChartInstance = new Chart(chartCtx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Portfolio Distribution',
+                data: data,
+                backgroundColor: [
+                    '#4ade80', '#fbbf24', '#60a5fa', '#f87171', '#c084fc', '#facc15', '#a3e635'
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: labels.length > 1, // Only show legend if there's data
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Portfolio Diversity'
+                }
+            }
+        }
+    });
+}
+
 
 function updateStockMarket(stocks) {
     stockMarketListEl.innerHTML = '';
     stocks.forEach(stock => {
         const stockEl = document.createElement('div');
         stockEl.className = 'stock-card';
-        stockEl.dataset.id = stock.id; // Set data-id for click events
+        stockEl.dataset.id = stock.id; 
 
-        // Determine price change indicator icon and color
-        let priceIndicatorIcon = 'fa-minus';
-        let priceIndicatorColor = 'price-neutral';
-        if (stock.change > 0) {
-            priceIndicatorIcon = 'fa-arrow-up';
-            priceIndicatorColor = 'price-up';
-        } else if (stock.change < 0) {
-            priceIndicatorIcon = 'fa-arrow-down';
-            priceIndicatorColor = 'price-down';
-        }
+        // **FIX:** Detailed price change indicator logic
+        let priceChangeColor = 'text-gray-500'; // Neutral
+        if (stock.change > 0) priceChangeColor = 'text-green-500';
+        if (stock.change < 0) priceChangeColor = 'text-red-500';
+
+        const previousPrice = stock.price - stock.change;
+        const percentageChange = previousPrice !== 0 ? (stock.change / previousPrice) * 100 : 0;
+        
+        const changeSign = stock.change > 0 ? '+' : '';
+        const changeText = `${changeSign}${formatCurrency(stock.change)} (${changeSign}${percentageChange.toFixed(2)}%)`;
 
         stockEl.innerHTML = `
             <div class="stock-card-header">
@@ -107,8 +155,8 @@ function updateStockMarket(stocks) {
                 <span class="stock-ticker">${stock.ticker}</span>
             </div>
             <div class="stock-price-container">
-                <span>${formatCurrency(stock.price)}</span>
-                <i class="fas ${priceIndicatorIcon} price-indicator ${priceIndicatorColor}"></i>
+                <span class="stock-price">${formatCurrency(stock.price)}</span>
+                <span class="stock-change ${priceChangeColor}">${changeText}</span>
             </div>
             <div class="text-sm text-gray-500">${stock.industry}</div>
         `;
@@ -139,30 +187,28 @@ function updateAchievements() {
     } else {
         unlockedAchievements.forEach(ach => {
             const li = document.createElement('li');
-            li.innerHTML = `<strong><i class="fas fa-trophy"></i> ${ach.title}</strong> ${ach.description}`;
+            li.innerHTML = `<i class="fas fa-trophy text-yellow-400"></i> <strong>${ach.title}:</strong> ${ach.description}`;
             achievementsListEl.appendChild(li);
         });
     }
 }
 
-// --- Modal and Notification Functions ---
 
 function openStockModal(stock, portfolioStock) {
-    // Populate info
     stockModalName.textContent = `${stock.name} (${stock.ticker})`;
     stockModalDesc.textContent = stock.description;
     stockModalPrice.textContent = formatCurrency(stock.price);
     stockModalOwned.textContent = portfolioStock ? portfolioStock.quantity : 0;
     transactionQuantityInput.value = '1';
 
-    // Draw chart
     const chartCtx = document.getElementById('stock-chart').getContext('2d');
-    if (chartInstance) {
-        chartInstance.destroy();
+    if (stockChartInstance) {
+        stockChartInstance.destroy();
     }
-    chartInstance = new Chart(chartCtx, {
+    stockChartInstance = new Chart(chartCtx, {
         type: 'line',
         data: {
+            // **FIX:** Ensure chart labels are correct
             labels: stock.history.map(h => `Day ${h.day}`),
             datasets: [{
                 label: 'Price History',
@@ -176,22 +222,22 @@ function openStockModal(stock, portfolioStock) {
         options: { responsive: true, maintainAspectRatio: false }
     });
 
-    // Show modal
     stockModal.classList.remove('hidden');
 }
 
 function closeStockModal() {
     stockModal.classList.add('hidden');
-    if (chartInstance) {
-        chartInstance.destroy();
-        chartInstance = null;
+    if (stockChartInstance) {
+        stockChartInstance.destroy();
+        stockChartInstance = null;
     }
     activeStockId = null;
 }
 
-function showNotification(message, type = 'error') {
+function showNotification(message, type = 'success') {
     notificationEl.textContent = message;
-    notificationEl.className = type; // 'success' or 'error' class from style.css
+    notificationEl.className = 'notification'; // Use a base class
+    notificationEl.classList.add(type); // Add type class ('success' or 'error')
     notificationEl.classList.remove('hidden');
 
     setTimeout(() => {
@@ -199,8 +245,12 @@ function showNotification(message, type = 'error') {
     }, 3000);
 }
 
-// --- Helper Function ---
+
 function formatCurrency(amount) {
+    // Handle potential non-numeric values gracefully
+    if (typeof amount !== 'number') {
+        return '$0.00';
+    }
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
 }
 
@@ -214,5 +264,6 @@ export {
     updateAchievements,
     showNotification,
     openStockModal,
-    closeStockModal
+    closeStockModal,
+    formatCurrency
 };

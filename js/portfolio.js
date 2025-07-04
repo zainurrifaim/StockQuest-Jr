@@ -1,10 +1,11 @@
 import { showNotification } from './ui.js';
 import { playSound } from './audio.js';
-// NEW: Import getStockById to fetch the latest stock data
 import { getStockById } from './stock.js';
 
 const INITIAL_CASH = 10000;
+const DAILY_INTEREST_RATE = 0.001; // 0.1% daily interest
 let cash = INITIAL_CASH;
+// The map will now store { id, name, quantity, averageCost }
 const portfolioStocks = new Map();
 
 function resetPortfolio() {
@@ -13,28 +14,32 @@ function resetPortfolio() {
 }
 
 /**
- * FIX: This function now calculates total wealth based on the CURRENT market price.
+ * Calculates and adds interest to the current cash balance.
  */
+function addInterest() {
+    const interestEarned = cash * DAILY_INTEREST_RATE;
+    cash += interestEarned;
+    // Notify the player about the interest earned
+    if (interestEarned > 0.01) {
+       showNotification(`You earned ${formatCurrency(interestEarned)} in interest!`, 'success');
+    }
+}
+
 function getPortfolioData() {
     const portfolioEntries = Array.from(portfolioStocks.values());
     let stockValue = 0;
-    
-    // Create a new array of stocks with their current market prices
+
     const stocksWithCurrentPrices = portfolioEntries.map(ownedStock => {
-        // Get the most up-to-date stock data from the market
         const currentMarketData = getStockById(ownedStock.id);
         if (currentMarketData) {
-            // Calculate the value of this holding with the current price
             stockValue += currentMarketData.price * ownedStock.quantity;
-            
-            // Return a new object with the current price for the UI
             return {
                 ...ownedStock,
-                price: currentMarketData.price, // Use the current market price
-                ticker: currentMarketData.ticker // Ensure ticker is included
+                price: currentMarketData.price,
+                ticker: currentMarketData.ticker
             };
         }
-        return ownedStock; // Fallback, though should always be found
+        return ownedStock;
     });
 
     const totalWealth = cash + stockValue;
@@ -47,11 +52,21 @@ function buyStock(stock, quantity) {
     if (cash >= cost) {
         cash -= cost;
         const existingStock = portfolioStocks.get(stock.id);
+
         if (existingStock) {
-            existingStock.quantity += quantity;
+            // Calculate the new average cost
+            const totalCost = (existingStock.averageCost * existingStock.quantity) + cost;
+            const totalQuantity = existingStock.quantity + quantity;
+            existingStock.averageCost = totalCost / totalQuantity;
+            existingStock.quantity = totalQuantity;
         } else {
-            // Only store the ID and quantity, as price and other data will be fetched live.
-            portfolioStocks.set(stock.id, { id: stock.id, name: stock.name, quantity: quantity });
+            // It's a new stock, so the average cost is the current price
+            portfolioStocks.set(stock.id, {
+                id: stock.id,
+                name: stock.name,
+                quantity: quantity,
+                averageCost: stock.price
+            });
         }
         playSound('buy-sound');
         return true;
@@ -63,11 +78,10 @@ function buyStock(stock, quantity) {
 
 function sellStock(stockId, quantityToSell) {
     const ownedStock = portfolioStocks.get(stockId);
-    
+
     if (ownedStock && quantityToSell > 0 && quantityToSell <= ownedStock.quantity) {
-        // Get the current market price for the sale
         const currentMarketData = getStockById(stockId);
-        if (!currentMarketData) return false; // Should not happen
+        if (!currentMarketData) return false;
 
         const revenue = currentMarketData.price * quantityToSell;
         cash += revenue;
@@ -82,4 +96,9 @@ function sellStock(stockId, quantityToSell) {
     return false;
 }
 
-export { getPortfolioData, buyStock, sellStock, resetPortfolio };
+// Helper function to format currency, can be used locally
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+}
+
+export { getPortfolioData, buyStock, sellStock, resetPortfolio, addInterest };

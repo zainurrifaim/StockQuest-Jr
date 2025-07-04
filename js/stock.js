@@ -1,6 +1,5 @@
 // js/stock.js
 
-// A list of all available stocks with more details for a richer experience
 const initialStocks = [
     {
         id: 'TECH',
@@ -9,7 +8,7 @@ const initialStocks = [
         price: 150,
         history: [],
         industry: 'Technology',
-        change: 0, // NEW: To track daily price change
+        change: 0,
         description: 'A leading technology company known for its innovative software solutions and cutting-edge artificial intelligence research.'
     },
     {
@@ -66,33 +65,36 @@ const initialStocks = [
 
 let stocks = [];
 
-// Initializes stocks with a deep copy and sets initial history
 function initializeStocks() {
     stocks = JSON.parse(JSON.stringify(initialStocks));
     stocks.forEach(stock => {
         stock.history = [{ day: 0, price: stock.price }];
-        stock.change = 0; // Ensure change is reset
+        stock.change = 0;
     });
 }
 
-// Gets the current state of all stocks
 function getStocks() {
     return stocks;
 }
 
-// Gets a single stock by its ID
 function getStockById(id) {
     return stocks.find(stock => stock.id === id);
 }
 
-// Updates the price of a stock and records its change and history
-function updateStockPrice(id, newPrice) {
+/**
+ * Updates a stock's price and records its history. The 'change' property
+ * is now calculated and set directly in the main game loop (main.js).
+ * @param {string} id - The stock's ID.
+ * @param {number} newPrice - The new current price.
+ * @param {number} day - The current day to record in history.
+ */
+function updateStockPrice(id, newPrice, day) {
     const stock = getStockById(id);
     if (stock) {
-        const oldPrice = stock.price;
         stock.price = Math.max(1, newPrice); // Price cannot go below $1
-        stock.change = stock.price - oldPrice; // NEW: Calculate and store the change
-        stock.history.push({ day: null, price: stock.price }); // Day will be set in main.js
+        
+        // Add a new entry to the history for the daily chart
+        stock.history.push({ day: day, price: stock.price });
     }
 }
 
