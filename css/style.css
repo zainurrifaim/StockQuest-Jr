@@ -1,31 +1,57 @@
-/* css/style.css */
+/* Base Styles */
 body {
     font-family: 'Nunito', sans-serif;
+    background-color: #f8fafc;
 }
 
+/* Layout */
 #game-header, #dashboard, #game-footer {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
+/* Typography */
 .game-title {
     font-family: 'Fredoka One', cursive;
     font-size: 2.5rem;
     text-align: center;
-    color: #1e3a8a;
+    color: #1e40af;
     padding: 0.5rem 0;
     margin-bottom: 1rem;
 }
 
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+    color: #1f2937;
+}
+
+.card-title .fas {
+    margin-right: 0.5rem;
+}
+
+/* Game Controls */
 #game-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
 }
 
@@ -35,50 +61,19 @@ body {
     gap: 0.5rem;
 }
 
-#difficulty {
-    border-radius: 0.375rem;
-    border: 1px solid #d1d5db;
-    padding: 0.25rem 0.5rem;
-}
-
 .day-counter {
     font-size: 1.125rem;
     font-weight: 600;
     color: #4b5563;
 }
 
-.card {
-    background-color: #ffffff;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    display: flex; /* Added for better flex control */
-    flex-direction: column; /* Ensure vertical layout */
+#difficulty {
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0.25rem 0.5rem;
 }
 
-/* **FIX:** Make market card grow to fill space */
-#market-card {
-    flex-grow: 1;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 0.5rem;
-    color: #1f2937;
-}
-
-.card-title .fas {
-    margin-right: 0.5rem;
-}
-
-/* Portfolio and News cards should not grow, market card should */
-#portfolio-card, #news-card {
-    flex-shrink: 0;
-}
-
+/* Portfolio */
 .portfolio-stats {
     margin-bottom: 1rem;
 }
@@ -95,6 +90,7 @@ body {
     font-size: 1.125rem;
     border-top: 1px solid #f3f4f6;
     margin-top: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 .portfolio-stock-item {
@@ -102,36 +98,33 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background: #f9fafb;
 }
 
-.portfolio-stock-item:nth-child(odd) {
-    background-color: #f9fafb;
+/* Stock Market */
+#market-card {
+    flex-grow: 1;
 }
 
-#news-feed p {
-    padding: 0.5rem 0;
-    line-height: 1.6;
-    color: #4b5563;
-}
-
-/* **FIX:** Let the stock list grow and fill available space */
 #stock-market-list {
     flex-grow: 1;
 }
 
 .stock-card {
-    background-color: #f9fafb;
-    border-radius: 0.5rem;
+    background: #f9fafb;
+    border-radius: 8px;
     padding: 1rem;
     border: 1px solid #e5e7eb;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
 }
 
 .stock-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .stock-card-header {
@@ -149,15 +142,14 @@ body {
 .stock-ticker {
     font-size: 0.875rem;
     color: #6b7280;
-    background-color: #e5e7eb;
+    background: #e5e7eb;
     padding: 0.125rem 0.375rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
 }
 
-/* **FIX:** Styling for new price display */
 .stock-price-container {
     display: flex;
-    align-items: baseline; /* Align price and change nicely */
+    align-items: baseline;
     gap: 0.5rem;
     margin-bottom: 0.25rem;
 }
@@ -172,18 +164,16 @@ body {
     font-weight: 600;
 }
 
-/* Colors are now applied directly in ui.js, so these aren't needed */
-/* .price-up { color: #22c55e; } ... etc. */
-
+/* Buttons */
 .game-button {
     width: 100%;
     padding: 0.75rem 1rem;
     font-size: 1.125rem;
     font-weight: 600;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,43 +184,135 @@ body {
     opacity: 0.9;
 }
 
-.next-day { background-color: #3b82f6; color: white; }
-.next-day:hover { background-color: #2563eb; }
-
-.restart { background-color: #ef4444; color: white; }
-.restart:hover { background-color: #dc2626; }
-
-/* **FIX:** Removed footer grid layout */
-#game-footer {
-    grid-template-columns: 1fr; /* Achievements card takes full width */
+.next-day {
+    background: #3b82f6;
+    color: white;
 }
 
-#achievements-list {
-    list-style: none;
-    padding: 0;
+.next-day:hover {
+    background: #2563eb;
 }
 
-#achievements-list li {
-    padding: 0.5rem 0.25rem;
-    border-bottom: 1px solid #f3f4f6;
+.restart {
+    background: #ef4444;
+    color: white;
+}
+
+.restart:hover {
+    background: #dc2626;
+}
+
+/* Tabs */
+.tab-btn {
+    padding: 1rem 0.25rem;
+    border-bottom: 2px solid transparent;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #6b7280;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
     color: #374151;
+    border-color: #d1d5db;
 }
 
-#achievements-list li:last-child {
-    border-bottom: none;
-}
-#achievements-list .fas {
-    margin-right: 0.5rem;
+.active-tab {
+    color: #3b82f6;
+    border-color: #3b82f6;
 }
 
-/* Modal Styles */
+/* Lesson Cards */
+.lesson-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.lesson-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-example {
+    margin-top: 1rem;
+    background: #eff6ff;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #60a5fa;
+    color: #1e3a8a;
+}
+
+/* Quiz */
+.quiz-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: left;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.quiz-option:hover:not(:disabled) {
+    border-color: #60a5fa;
+    box-shadow: 0 4px 12px 0 rgba(60, 131, 246, 0.2);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.quiz-option.correct {
+    background: #ecfdf5;
+    border-color: #22c55e;
+    color: #166534;
+    font-weight: 700;
+    box-shadow: 0 4px 12px 0 rgba(34, 197, 94, 0.2);
+}
+
+.quiz-option.incorrect {
+    background: #fef2f2;
+    border-color: #ef4444;
+    color: #991b1b;
+    font-weight: 700;
+}
+
+.quiz-option-text {
+    flex-grow: 1;
+}
+
+.feedback {
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.feedback.correct {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.feedback.incorrect {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Modal */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,13 +320,13 @@ body {
 }
 
 .modal-content {
-    background-color: white;
+    background: white;
     padding: 2rem;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     width: 90%;
     max-width: 600px;
     position: relative;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .modal-close-btn {
@@ -296,107 +378,127 @@ body {
     text-align: center;
     font-size: 1.125rem;
     border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
+    border-radius: 8px;
+    padding: 0.5rem;
 }
 
-#buy-btn { background-color: #22c55e; color: white; }
-#buy-btn:hover { background-color: #16a34a; }
+#buy-btn {
+    background: #22c55e;
+    color: white;
+}
 
-#sell-btn { background-color: #f97316; color: white; }
-#sell-btn:hover { background-color: #ea580c; }
+#buy-btn:hover {
+    background: #16a34a;
+}
 
+#sell-btn {
+    background: #f97316;
+    color: white;
+}
 
-/* Notification Styles */
+#sell-btn:hover {
+    background: #ea580c;
+}
+
+/* Notifications */
 .notification {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 1rem 2rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     color: white;
     font-weight: 600;
     z-index: 2000;
     transition: all 0.5s;
 }
+
 .notification.success {
-    background-color: #22c55e;
-}
-.notification.error {
-    background-color: #ef4444;
-}
-.notification.hidden {
-    display: none;
+    background: #22c55e;
 }
 
+.notification.error {
+    background: #ef4444;
+}
+
+/* About Page */
+.hero-section {
+    background: linear-gradient(45deg, #0052D4, #4364F7, #6FB1FC);
+}
+
+.specialty-card {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(67, 100, 247, 0.2);
+    border-color: #6FB1FC;
+}
+
+.card-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background: #dbeafe;
+    color: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+}
+
+.social-link-modern {
+    color: #6b7280;
+    transition: all 0.3s ease;
+    font-size: 2.25rem;
+}
+
+.social-link-modern:hover {
+    color: #3b82f6;
+    transform: scale(1.25);
+}
+
+/* Achievements */
+#achievements-list {
+    list-style: none;
+    padding: 0;
+}
+
+#achievements-list li {
+    padding: 0.5rem 0.25rem;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+}
+
+#achievements-list li:last-child {
+    border-bottom: none;
+}
+
+#achievements-list .fas {
+    margin-right: 0.5rem;
+}
+
+/* News */
+#news-feed p {
+    padding: 0.5rem 0;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+/* Utilities */
 .hidden {
     display: none !important;
 }
 
-/* Animation for Next Day button */
-.animate-pulse-fast {
-    animation: pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse-fast {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: .9;
-    transform: scale(1.05);
-  }
-}
-
-/* Add to your css/style.css file */
-
-.tab-btn {
-    padding: 1rem 0.25rem;
-    border-bottom-width: 2px;
-    border-color: transparent;
-    font-size: 1.125rem; /* 18px */
-    line-height: 1.75rem; /* 28px */
-    font-weight: 600;
-    color: #6b7280; /* text-gray-500 */
-    transition: all 0.2s ease-in-out;
-}
-
-.tab-btn:hover {
-    color: #374151; /* text-gray-700 */
-    border-color: #d1d5db; /* border-gray-300 */
-}
-
-.active-tab {
-    color: #3b82f6; /* text-blue-500 */
-    border-color: #3b82f6; /* border-blue-500 */
-}
-
-.lesson-card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
-}
-
-.lesson-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.interactive-example {
-    margin-top: 1rem;
-    background-color: #eff6ff; /* bg-blue-50 */
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-left-width: 4px;
-    border-color: #60a5fa; /* border-blue-400 */
-    color: #1e3a8a; /* text-blue-800 */
-}
-
 .link-primary {
-    color: #3b82f6; /* text-blue-500 */
+    color: #3b82f6;
     font-weight: 600;
 }
 
@@ -404,110 +506,17 @@ body {
     text-decoration: underline;
 }
 
-/* Add or replace these classes in your css/style.css file */
-
-.quiz-option {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: #ffffff;
-    border: 2px solid #e5e7eb; /* border-gray-200 */
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem; /* More rounded */
-    font-weight: 600;
-    text-align: left;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease-in-out;
+.animate-pulse-fast {
+    animation: pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.quiz-option:hover:not(:disabled) {
-    border-color: #60a5fa; /* border-blue-400 */
-    box-shadow: 0 4px 12px 0 rgba(60, 131, 246, 0.2);
-    transform: translateY(-2px);
-    cursor: pointer;
-}
-
-.quiz-option:disabled {
-    cursor: not-allowed;
-    opacity: 0.9;
-}
-
-/* --- Style for the answer text within the button --- */
-.quiz-option-text {
-    flex-grow: 1;
-}
-
-/* --- CORRECT ANSWER --- */
-.quiz-option.correct {
-    background-color: #ecfdf5; /* bg-green-50 */
-    border-color: #22c55e;   /* border-green-500 */
-    color: #166534;          /* text-green-800 */
-    font-weight: 700;
-    box-shadow: 0 4px 12px 0 rgba(34, 197, 94, 0.2);
-}
-
-.quiz-option.correct .fa-check-circle {
-    font-size: 1.5em; /* Make icon bigger */
-}
-
-
-/* --- INCORRECT ANSWER --- */
-.quiz-option.incorrect {
-    background-color: #fef2f2; /* bg-red-50 */
-    border-color: #ef4444;   /* border-red-500 */
-    color: #991b1b;          /* text-red-800 */
-    font-weight: 700;
-}
-
-.quiz-option.incorrect .fa-times-circle {
-    font-size: 1.5em; /* Make icon bigger */
-}
-
-
-/* --- FEEDBACK TEXT --- */
-.feedback {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.feedback.correct {
-    background-color: #dcfce7;
-    color: #15803d;
-}
-
-.feedback.incorrect {
-    background-color: #fee2e2;
-    color: #991b1b;
-}
-
-/* Add or replace these classes in your css/style.css file */
-
-.hero-section {
-    background: linear-gradient(45deg, #0052D4, #4364F7, #6FB1FC);
-}
-
-.section-title-modern {
-    @apply text-3xl font-extrabold text-gray-900 mb-6 flex items-center;
-}
-
-.specialty-card {
-    @apply bg-gray-50 p-8 rounded-xl transition-all duration-300 ease-in-out;
-    border: 1px solid #e5e7eb;
-}
-
-.specialty-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px -5px rgba(67, 100, 247, 0.2), 0 8px 10px -6px rgba(67, 100, 247, 0.1);
-    border-color: #6FB1FC;
-}
-
-.card-icon-wrapper {
-    @apply w-16 h-16 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mb-5 text-3xl;
-}
-
-.social-link-modern {
-    @apply text-gray-500 hover:text-blue-600 transition-transform duration-300 ease-in-out;
-    @apply hover:scale-125;
-    font-size: 2.25rem; /* 36px */
+@keyframes pulse-fast {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
 }
