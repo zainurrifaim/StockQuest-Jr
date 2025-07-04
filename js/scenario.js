@@ -9,7 +9,7 @@ let gameScenarios = [];
  */
 async function loadScenarios(difficulty) {
     // Determine which file to load
-    const scenarioFile = difficulty === 'hard' ? '../data/scenarios-hard.json' : '../data/scenarios-easy.json';
+    const scenarioFile = difficulty === 'hard' ? 'data/scenarios-hard.json' : 'data/scenarios-easy.json';
 
     try {
         const response = await fetch(scenarioFile);

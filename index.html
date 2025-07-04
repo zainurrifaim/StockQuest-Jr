@@ -13,9 +13,11 @@
     <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-blue-50">
+<body class="bg-blue-50 flex flex-col min-h-screen">
 
-    <div id="game-container" class="container mx-auto p-4 md:p-6">
+    <div id="navbar-container"></div>
+
+    <div id="game-container" class="container mx-auto p-4 md:p-6 flex-grow">
 
         <header id="game-header">
             <h1 class="game-title">StockQuest Jr.</h1>
@@ -76,14 +78,16 @@
 
         </main>
 
-        <footer id="game-footer" class="mt-6">
+        <div id="game-footer" class="mt-6">
             <div class="card md:col-span-3" id="achievements-card">
                 <h2 class="card-title"><i class="fas fa-trophy text-yellow-400"></i> Achievements</h2>
                 <ul id="achievements-list"></ul>
             </div>
-        </footer>
+        </div>
 
     </div>
+
+    <div id="footer-container"></div>
 
     <div id="stock-modal" class="modal-overlay hidden">
         <div class="modal-content">
@@ -117,6 +121,7 @@
     <audio id="achievement-sound" src="sounds/achievement.mp3"></audio>
 
     <script type="module" src="js/main.js"></script>
+    <script src="js/components.js"></script>
 
 </body>
 </html>
