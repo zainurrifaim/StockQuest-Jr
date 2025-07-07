@@ -2,7 +2,14 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #f8fafc;
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
 }
+
 
 /* Layout */
 #game-header, #dashboard, #game-footer {
@@ -15,7 +22,7 @@ body {
     font-family: 'Fredoka One', cursive;
     font-size: 2.5rem;
     text-align: center;
-    color: #1e40af;
+    color: #82a1fd;
     padding: 0.5rem 0;
     margin-bottom: 1rem;
 }
@@ -185,7 +192,7 @@ body {
 }
 
 .next-day {
-    background: #3b82f6;
+    background: #82a1fd;
     color: white;
 }
 
@@ -243,7 +250,7 @@ body {
     padding: 1rem;
     border-radius: 8px;
     border-left: 4px solid #60a5fa;
-    color: #1e3a8a;
+    color: #82a1fd;
 }
 
 /* Quiz */
