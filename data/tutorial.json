@@ -1,0 +1,25 @@
+{
+    "title": "How to Play StockQuest Jr.",
+    "steps": [
+        {
+            "title": "Welcome to the Stock Market! 📈",
+            "content": "Your goal is to buy and sell stocks to make as much money as you can. Think of a stock as a tiny piece of a company. If the company does well, your piece becomes more valuable!"
+        },
+        {
+            "title": "Buying and Selling Stocks 🛒",
+            "content": "To buy or sell, just click on a stock to open the trading window. You can only buy stocks if you have enough cash, and you can only sell stocks that you already own."
+        },
+        {
+            "title": "Watch the News! 📰",
+            "content": "Keep an eye on the 'Today's News' section. Good news can make a stock's price go up, and bad news can make it go down. Use this information to make smart decisions!"
+        },
+        {
+            "title": "Advance to the Next Day ☀️",
+            "content": "When you're done buying and selling for the day, click the 'Next Day' button to see how your stocks performed. You'll also earn a little bit of interest on any cash you're not using."
+        },
+        {
+            "title": "Have Fun! 🎉",
+            "content": "The best way to learn is by doing. Don't be afraid to experiment and see what happens. Good luck, and have fun on your quest!"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
         "day": 1,
         "news": {
             "headline": "Welcome to StockQuest Jr.!",
-            "prediction": "The market is starting off stable. It's a great day to learn the ropes and buy your first stock."
+            "prediction": "The market seems stable today. This could be a good opportunity to learn the ropes and buy your first stock."
         },
         "effects": [
             { "target": "TECH", "change": 1.50 }, { "target": "HEALTH", "change": -0.75 }, { "target": "ENERGY", "change": 0.50 },
@@ -13,210 +13,210 @@
     {
         "day": 2,
         "news": {
-            "headline": "Innovate Corp (INVT) Gadget is a Hit!",
-            "prediction": "Sales are off the charts for their new phone. Analysts expect the tech sector to continue climbing tomorrow as a result."
+            "headline": "Innovate Corp (INVT) Reports Strong Sales for New Gadget",
+            "prediction": "The solid sales figures suggest the tech sector could see modest gains tomorrow."
         },
         "effects": [
-            { "target": "TECH", "change": 15.72 }, { "target": "HEALTH", "change": 1.10 }, { "target": "ENERGY", "change": -0.50 },
-            { "target": "FIN", "change": 2.50 }, { "target": "RETAIL", "change": 0.75 }, { "target": "AUTO", "change": 1.20 }
+            { "target": "TECH", "change": 8.20 }, { "target": "HEALTH", "change": 0.30 }, { "target": "ENERGY", "change": -1.10 },
+            { "target": "FIN", "change": 1.80 }, { "target": "RETAIL", "change": 2.40 }, { "target": "AUTO", "change": 0.60 }
         ]
     },
     {
         "day": 3,
         "news": {
-            "headline": "Market Optimism is High!",
-            "prediction": "A widespread rally is lifting all stocks. What a great time to be in the market!"
+            "headline": "Anticipation Builds for Vitality Inc. (VITA) Drug Decision",
+            "prediction": "A decision on VITA's new drug is expected tomorrow. Market sentiment appears cautiously optimistic about approval odds."
         },
         "effects": [
-            { "target": "TECH", "change": 3.50 }, { "target": "HEALTH", "change": 2.50 }, { "target": "ENERGY", "change": 4.20 },
-            { "target": "FIN", "change": 3.60 }, { "target": "RETAIL", "change": 2.90 }, { "target": "AUTO", "change": 4.30 }
+            { "target": "TECH", "change": -1.20 }, { "target": "HEALTH", "change": 3.80 }, { "target": "ENERGY", "change": 0.40 },
+            { "target": "FIN", "change": 0.20 }, { "target": "RETAIL", "change": -0.60 }, { "target": "AUTO", "change": 0.90 }
         ]
     },
     {
         "day": 4,
         "news": {
-            "headline": "Vitality Inc (VITA) Drug Approved!",
-            "prediction": "This new life-saving drug is a game-changer. The Health sector is expected to have a strong week."
+            "headline": "Vitality Inc (VITA) Drug Approved, But Manufacturing Delays Emerge",
+            "prediction": "While the approval is positive, production concerns may limit immediate gains. Long-term outlook remains strong."
         },
         "effects": [
-            { "target": "TECH", "change": 1.10 }, { "target": "HEALTH", "change": 22.50 }, { "target": "ENERGY", "change": 0.80 },
-            { "target": "FIN", "change": 0.25 }, { "target": "RETAIL", "change": 0.10 }, { "target": "AUTO", "change": -0.50 }
+            { "target": "TECH", "change": 0.80 }, { "target": "HEALTH", "change": 12.30 }, { "target": "ENERGY", "change": 1.20 },
+            { "target": "FIN", "change": -0.50 }, { "target": "RETAIL", "change": 0.40 }, { "target": "AUTO", "change": -0.20 }
         ]
     },
     {
         "day": 5,
         "news": {
-            "headline": "AutoMakers (AUTO) Teases New Electric Car",
-            "rumor": "There are rumors that AutoMakers will reveal a stunning new electric car in a few days. Investors are getting excited."
+            "headline": "AutoMakers (AUTO) Teases Electric Car Reveal",
+            "prediction": "Pre-reveal hype is building, but investors remain cautious after previous automotive disappointments this year."
         },
         "effects": [
-            { "target": "TECH", "change": 0.50 }, { "target": "HEALTH", "change": -0.20 }, { "target": "ENERGY", "change": 1.00 },
-            { "target": "FIN", "change": 1.00 }, { "target": "RETAIL", "change": -0.50 }, { "target": "AUTO", "change": 3.80 }
+            { "target": "TECH", "change": 1.10 }, { "target": "HEALTH", "change": -0.40 }, { "target": "ENERGY", "change": -0.80 },
+            { "target": "FIN", "change": 0.60 }, { "target": "RETAIL", "change": 0.20 }, { "target": "AUTO", "change": 4.50 }
         ]
     },
     {
         "day": 6,
         "news": {
-            "headline": "Famous Investor Praises Secure Bank (SBNK)",
-            "prediction": "After a celebrity investor called SBNK 'the future of banking', its stock is seeing a huge jump."
+            "headline": "Celebrity Investor Praises Secure Bank (SBNK)",
+            "prediction": "High-profile endorsements can boost sentiment, though fundamentals matter more than celebrity opinions."
         },
         "effects": [
-            { "target": "TECH", "change": 1.20 }, { "target": "HEALTH", "change": 0.80 }, { "target": "ENERGY", "change": 0.50 },
-            { "target": "FIN", "change": 18.25 }, { "target": "RETAIL", "change": 1.15 }, { "target": "AUTO", "change": 0.90 }
+            { "target": "TECH", "change": 0.40 }, { "target": "HEALTH", "change": 1.20 }, { "target": "ENERGY", "change": 0.10 },
+            { "target": "FIN", "change": 6.80 }, { "target": "RETAIL", "change": 0.90 }, { "target": "AUTO", "change": 1.30 }
         ]
     },
     {
         "day": 7,
         "news": {
-            "headline": "MegaMart (MMRT) Announces Global Expansion",
-            "prediction": "MegaMart is opening 100 new stores worldwide. Analysts predict this will lead to record profits next quarter."
+            "headline": "MegaMart (MMRT) Announces Aggressive Global Expansion",
+            "prediction": "100 new stores sounds impressive, but rapid expansion can strain resources. Market reaction may be mixed."
         },
         "effects": [
-            { "target": "TECH", "change": -0.50 }, { "target": "HEALTH", "change": 0.30 }, { "target": "ENERGY", "change": 0.10 },
-            { "target": "FIN", "change": 0.70 }, { "target": "RETAIL", "change": 14.80 }, { "target": "AUTO", "change": 0.40 }
+            { "target": "TECH", "change": -0.30 }, { "target": "HEALTH", "change": 0.60 }, { "target": "ENERGY", "change": 0.80 },
+            { "target": "FIN", "change": 1.40 }, { "target": "RETAIL", "change": 8.90 }, { "target": "AUTO", "change": 0.20 }
         ]
     },
     {
         "day": 8,
         "news": {
-            "headline": "AutoMakers (AUTO) Reveals New Electric Car!",
-            "prediction": "It's a huge hit! Their stock is racing ahead as the reveal lived up to the hype!"
+            "headline": "AutoMakers (AUTO) Electric Car Reveal Exceeds Expectations",
+            "prediction": "The reveal generated significant buzz, but supply chain questions remain. Expect volatility as details emerge."
         },
         "effects": [
-            { "target": "TECH", "change": 1.10 }, { "target": "HEALTH", "change": 0.60 }, { "target": "ENERGY", "change": -0.20 },
-            { "target": "FIN", "change": 1.80 }, { "target": "RETAIL", "change": 2.10 }, { "target": "AUTO", "change": 25.50 }
+            { "target": "TECH", "change": 2.10 }, { "target": "HEALTH", "change": 0.80 }, { "target": "ENERGY", "change": -2.40 },
+            { "target": "FIN", "change": 1.20 }, { "target": "RETAIL", "change": 1.60 }, { "target": "AUTO", "change": 15.80 }
         ]
     },
     {
         "day": 9,
         "news": {
-            "headline": "Minor Software Bug for Innovate Corp (INVT)",
-            "prediction": "A small bug was found in INVT's latest software. It's causing a slight dip in price, but experts expect it to recover quickly."
+            "headline": "Innovate Corp (INVT) Patches Software Bug, Announces New Security Features",
+            "prediction": "Quick bug fix and security upgrade could actually boost confidence. Sometimes challenges create opportunities."
         },
         "effects": [
-            { "target": "TECH", "change": -7.50 }, { "target": "HEALTH", "change": 0.50 }, { "target": "ENERGY", "change": 1.20 },
-            { "target": "FIN", "change": 0.30 }, { "target": "RETAIL", "change": 0.80 }, { "target": "AUTO", "change": 1.50 }
+            { "target": "TECH", "change": 3.20 }, { "target": "HEALTH", "change": -0.10 }, { "target": "ENERGY", "change": 0.90 },
+            { "target": "FIN", "change": 2.10 }, { "target": "RETAIL", "change": 1.20 }, { "target": "AUTO", "change": 0.70 }
         ]
     },
     {
         "day": 10,
         "news": {
-            "headline": "Strong Economy Boosts Tech and Finance",
-            "prediction": "Positive economic news means more people are investing and buying new gadgets. Tech and Finance are big winners today."
+            "headline": "Mixed Economic Report: Growth Up, Inflation Concerns Rise",
+            "prediction": "Good growth news battles inflation worries. Tech and finance may benefit, but energy costs could pressure other sectors."
         },
         "effects": [
-            { "target": "TECH", "change": 12.00 }, { "target": "HEALTH", "change": 2.50 }, { "target": "ENERGY", "change": 3.10 },
-            { "target": "FIN", "change": 15.00 }, { "target": "RETAIL", "change": 4.50 }, { "target": "AUTO", "change": 5.00 }
+            { "target": "TECH", "change": 7.30 }, { "target": "HEALTH", "change": -1.20 }, { "target": "ENERGY", "change": 8.50 },
+            { "target": "FIN", "change": 9.80 }, { "target": "RETAIL", "change": -2.10 }, { "target": "AUTO", "change": 1.40 }
         ]
     },
     {
         "day": 11,
         "news": {
-            "headline": "A Calm Day on the Market",
-            "prediction": "No big news today, just calm and steady growth. These are good days to hold your investments and earn interest."
+            "headline": "Quiet Trading Day as Markets Consolidate",
+            "prediction": "After recent volatility, consolidation is healthy. Some profit-taking expected, but overall stability likely."
         },
         "effects": [
-            { "target": "TECH", "change": 1.80 }, { "target": "HEALTH", "change": 1.50 }, { "target": "ENERGY", "change": 1.20 },
-            { "target": "FIN", "change": 2.10 }, { "target": "RETAIL", "change": 1.40 }, { "target": "AUTO", "change": 1.90 }
+            { "target": "TECH", "change": -0.80 }, { "target": "HEALTH", "change": 1.10 }, { "target": "ENERGY", "change": 0.60 },
+            { "target": "FIN", "change": -1.20 }, { "target": "RETAIL", "change": 0.40 }, { "target": "AUTO", "change": 0.90 }
         ]
     },
     {
         "day": 12,
         "news": {
-            "headline": "Green Energy Subsidies Announced!",
-            "prediction": "The government is giving money to green energy companies. Power Grid Co (GRID) is expected to benefit all week."
+            "headline": "Government Green Energy Subsidies Announced",
+            "prediction": "Environmental policies typically boost clean energy, but funding details and timeline remain unclear."
         },
         "effects": [
-            { "target": "TECH", "change": 0.80 }, { "target": "HEALTH", "change": -0.10 }, { "target": "ENERGY", "change": 19.80 },
-            { "target": "FIN", "change": 1.20 }, { "target": "RETAIL", "change": 0.40 }, { "target": "AUTO", "change": -2.50 }
+            { "target": "TECH", "change": 2.40 }, { "target": "HEALTH", "change": 0.30 }, { "target": "ENERGY", "change": 14.20 },
+            { "target": "FIN", "change": 1.80 }, { "target": "RETAIL", "change": 0.10 }, { "target": "AUTO", "change": 6.30 }
         ]
     },
     {
         "day": 13,
         "news": {
-            "headline": "MegaMart (MMRT) Reports Record Sales",
-            "prediction": "Their expansion is paying off! MegaMart's stock is soaring after announcing incredible sales figures."
+            "headline": "MegaMart (MMRT) Q3 Earnings Beat Expectations",
+            "prediction": "Strong earnings validate the expansion strategy. Retail sector momentum appears sustainable."
         },
         "effects": [
-            { "target": "TECH", "change": 1.50 }, { "target": "HEALTH", "change": 1.20 }, { "target": "ENERGY", "change": 0.90 },
-            { "target": "FIN", "change": 2.30 }, { "target": "RETAIL", "change": 21.40 }, { "target": "AUTO", "change": 1.80 }
+            { "target": "TECH", "change": 1.20 }, { "target": "HEALTH", "change": 0.70 }, { "target": "ENERGY", "change": 0.40 },
+            { "target": "FIN", "change": 2.80 }, { "target": "RETAIL", "change": 13.60 }, { "target": "AUTO", "change": 1.10 }
         ]
     },
     {
         "day": 14,
         "news": {
-            "headline": "AutoMakers (AUTO) and Innovate Corp (INVT) Announce Partnership",
-            "prediction": "AUTO will use INVT's chips in their new cars! This is great news for both companies."
+            "headline": "AutoMakers (AUTO) and Innovate Corp (INVT) Partnership Announced",
+            "prediction": "Strategic partnerships can create value, but integration challenges often emerge. Monitor execution closely."
         },
         "effects": [
-            { "target": "TECH", "change": 14.60 }, { "target": "HEALTH", "change": 0.50 }, { "target": "ENERGY", "change": 1.10 },
-            { "target": "FIN", "change": 3.40 }, { "target": "RETAIL", "change": 2.80 }, { "target": "AUTO", "change": 18.20 }
+            { "target": "TECH", "change": 6.40 }, { "target": "HEALTH", "change": -0.30 }, { "target": "ENERGY", "change": 1.80 },
+            { "target": "FIN", "change": 0.90 }, { "target": "RETAIL", "change": 1.40 }, { "target": "AUTO", "change": 9.70 }
         ]
     },
     {
         "day": 15,
         "news": {
-            "headline": "Minor Market Dip",
-            "prediction": "Some investors are selling to take profits after a long rally. Analysts say this is normal and not to panic."
+            "headline": "Global Trade Tensions Escalate",
+            "prediction": "Geopolitical uncertainty typically creates market volatility. Defensive sectors might outperform growth stocks."
         },
         "effects": [
-            { "target": "TECH", "change": -4.10 }, { "target": "HEALTH", "change": -2.80 }, { "target": "ENERGY", "change": -3.50 },
-            { "target": "FIN", "change": -5.00 }, { "target": "RETAIL", "change": -3.20 }, { "target": "AUTO", "change": -4.50 }
+            { "target": "TECH", "change": -6.20 }, { "target": "HEALTH", "change": 2.40 }, { "target": "ENERGY", "change": -3.10 },
+            { "target": "FIN", "change": -4.50 }, { "target": "RETAIL", "change": -5.80 }, { "target": "AUTO", "change": -7.20 }
         ]
     },
     {
         "day": 16,
         "news": {
-            "headline": "Vitality Inc (VITA) Announces Anti-Aging Cream Success",
-            "rumor": "Successful trials for a new anti-aging cream have investors very excited. Rumor has it the product will be on shelves next month."
+            "headline": "Vitality Inc (VITA) Anti-Aging Cream Trials Show Promise",
+            "prediction": "Early trial results are encouraging, but regulatory approval remains uncertain. Biotech investments carry high risk-reward."
         },
         "effects": [
-            { "target": "TECH", "change": 1.00 }, { "target": "HEALTH", "change": 28.00 }, { "target": "ENERGY", "change": -0.50 },
-            { "target": "FIN", "change": 2.00 }, { "target": "RETAIL", "change": 1.50 }, { "target": "AUTO", "change": 0.80 }
+            { "target": "TECH", "change": 0.60 }, { "target": "HEALTH", "change": 18.50 }, { "target": "ENERGY", "change": -0.90 },
+            { "target": "FIN", "change": 1.30 }, { "target": "RETAIL", "change": 3.20 }, { "target": "AUTO", "change": 0.40 }
         ]
     },
     {
         "day": 17,
         "news": {
-            "headline": "Global Economic Boom!",
-            "prediction": "Positive economic news from around the world is lifting the entire market! It's a great day for all investors."
+            "headline": "Central Bank Signals Interest Rate Stability",
+            "prediction": "Rate stability removes uncertainty, but growth concerns persist. Financial sector benefits, growth stocks face headwinds."
         },
         "effects": [
-            { "target": "TECH", "change": 8.00 }, { "target": "HEALTH", "change": 6.50 }, { "target": "ENERGY", "change": 7.20 },
-            { "target": "FIN", "change": 9.60 }, { "target": "RETAIL", "change": 7.90 }, { "target": "AUTO", "change": 8.30 }
+            { "target": "TECH", "change": 2.10 }, { "target": "HEALTH", "change": 1.80 }, { "target": "ENERGY", "change": 3.40 },
+            { "target": "FIN", "change": 12.60 }, { "target": "RETAIL", "change": 4.20 }, { "target": "AUTO", "change": 2.90 }
         ]
     },
     {
         "day": 18,
         "news": {
-            "headline": "Secure Bank (SBNK) Launches Popular Payment App",
-            "prediction": "The new app is a huge success, attracting millions of users. The bank's stock is surging, and its future looks bright."
+            "headline": "Secure Bank (SBNK) Payment App Gains Traction, But Faces Competition",
+            "prediction": "Strong user adoption is positive, but big tech competitors are entering the space. First-mover advantage may be temporary."
         },
         "effects": [
-            { "target": "TECH", "change": 4.20 }, { "target": "HEALTH", "change": 1.80 }, { "target": "ENERGY", "change": 2.50 },
-            { "target": "FIN", "change": 24.75 }, { "target": "RETAIL", "change": 3.15 }, { "target": "AUTO", "change": 2.90 }
+            { "target": "TECH", "change": 1.40 }, { "target": "HEALTH", "change": 0.90 }, { "target": "ENERGY", "change": 1.20 },
+            { "target": "FIN", "change": 8.90 }, { "target": "RETAIL", "change": 2.10 }, { "target": "AUTO", "change": 1.60 }
         ]
     },
     {
         "day": 19,
         "news": {
-            "headline": "Anticipation Builds for Final Day",
-            "prediction": "The market is buzzing with excitement for the last day of trading. Everyone is expecting a strong finish!"
+            "headline": "Market Volatility Increases Ahead of Final Trading Day",
+            "prediction": "End-of-period positioning creates unpredictable moves. Expect surprises as institutional money adjusts portfolios."
         },
         "effects": [
-            { "target": "TECH", "change": 5.10 }, { "target": "HEALTH", "change": 4.80 }, { "target": "ENERGY", "change": 3.50 },
-            { "target": "FIN", "change": 6.00 }, { "target": "RETAIL", "change": 4.20 }, { "target": "AUTO", "change": 5.50 }
+            { "target": "TECH", "change": -2.30 }, { "target": "HEALTH", "change": 6.80 }, { "target": "ENERGY", "change": 1.10 },
+            { "target": "FIN", "change": 4.20 }, { "target": "RETAIL", "change": -1.40 }, { "target": "AUTO", "change": 3.90 }
         ]
     },
     {
         "day": 20,
         "news": {
-            "headline": "Fantastic Final Day Rally!",
-            "prediction": "The market finishes with a strong rally across the board. Congratulations on completing your trading journey, trader!"
+            "headline": "Final Day Rally Driven by Unexpected Policy Announcement",
+            "prediction": "Last-minute policy changes create final trading opportunities. Congratulations on navigating the market's ups and downs!"
         },
         "effects": [
-            { "target": "TECH", "change": 10.00 }, { "target": "HEALTH", "change": 8.00 }, { "target": "ENERGY", "change": 7.50 },
-            { "target": "FIN", "change": 11.00 }, { "target": "RETAIL", "change": 9.00 }, { "target": "AUTO", "change": 12.00 }
+            { "target": "TECH", "change": 8.70 }, { "target": "HEALTH", "change": 5.40 }, { "target": "ENERGY", "change": 6.20 },
+            { "target": "FIN", "change": 7.30 }, { "target": "RETAIL", "change": 9.10 }, { "target": "AUTO", "change": 10.80 }
         ]
     }
 ]

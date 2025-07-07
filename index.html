@@ -22,7 +22,7 @@
         <header id="game-header" class="text-center mb-8">
             <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Fredoka One', cursive;">Stock Market Simulator</h1>
             <p class="text-gray-600 mt-2">The fun way to learn about the stock market!</p>
-            <div id="game-controls" class="mt-4 inline-flex justify-center items-center gap-x-8 bg-white p-3 rounded-lg shadow-sm">
+            <div id="game-controls" class="mt-4 flex justify-center items-center flex-wrap gap-4 bg-white p-3 rounded-lg shadow-sm">
                 <div class="control-item">
                     <label for="difficulty" class="font-semibold text-gray-700">Difficulty:</label>
                     <select id="difficulty" class="rounded border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
@@ -32,6 +32,11 @@
                 </div>
                 <div class="control-item">
                     <span class="day-counter font-semibold text-gray-700">Day: <span id="current-day">1</span> / 20</span>
+                </div>
+                <div class="control-item">
+                    <button id="how-to-play-btn" class="game-button neutral">
+                        <i class="fas fa-question-circle"></i> How to Play
+                    </button>
                 </div>
             </div>
         </header>
@@ -79,7 +84,7 @@
         </main>
         <br>
         <div id="game-footer" class="mt-6">
-            <div class="card md:col-span-3" id="achievements-card">
+            <div class="card md:col-span-3 text-center" id="achievements-card">
                 <h2 class="card-title"><i class="fas fa-trophy text-yellow-400"></i> Achievements</h2>
                 <ul id="achievements-list"></ul>
             </div>
@@ -128,6 +133,17 @@
         </div>
     </div>
     <div id="notification" class="hidden"></div>
+
+    <div id="how-to-play-modal" class="text-center hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-11/12 md:w-1/2 max-w-2xl">
+            <h2 class="text-2xl font-bold mb-4" style="font-family: 'Fredoka One', cursive;">How to Play StockQuest Jr.</h2>
+            <div id="tutorial-content" class="text-left max-h-96 overflow-y-auto">
+                </div>
+            <button id="close-modal-btn" class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Got it!
+            </button>
+        </div>
+    </div>
 
     <audio id="buy-sound" src="assets/sounds/buy.mp3"></audio>
     <audio id="sell-sound" src="assets/sounds/sell.mp3"></audio>
