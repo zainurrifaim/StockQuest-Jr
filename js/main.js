@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstDayScenario) {
             updateNewsFeed(firstDayScenario.news, 1);
             
-            firstDayScenario.effects.forEach(effect => {
+            firstDayScenario.fluctuation.forEach(effect => {
                 const stock = getStockById(effect.target);
                 if (stock) {
                     const previousPrice = stock.price;
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const previousPrice = stock.price;
                 let scenarioChange = 0;
                 
-                const effect = scenario.effects.find(e => e.target === stock.id);
+                const effect = scenario.fluctuation.find(e => e.target === stock.id);
                 if (effect) {
                     scenarioChange = effect.change;
                 }
