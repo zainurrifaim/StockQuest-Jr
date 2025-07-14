@@ -198,11 +198,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     restartBtn.addEventListener('click', startGame);
 
+    // *** FIX: This event listener now correctly restarts the game when the difficulty is changed. ***
     difficultySelect.addEventListener('change', (e) => {
+        // If the game is active and has progressed past day 1, prevent changes.
         if (currentDay > 1 && gameActive) {
-            e.target.value = difficulty; // Prevent changing mid-game
+            e.target.value = difficulty; // Revert the selection in the dropdown.
+            showNotification("Cannot change difficulty after starting the game.", "error");
         } else {
-            difficulty = e.target.value;
+            // If the difficulty is changed on day 1 (before the first "Next Day" click),
+            // restart the game to load the correct scenarios.
+            startGame();
         }
     });
 

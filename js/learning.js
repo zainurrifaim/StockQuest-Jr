@@ -38,21 +38,34 @@ document.addEventListener('DOMContentLoaded', () => {
             lessonsContainer.innerHTML = ''; // Clear loading message
             data.lessons.forEach(lesson => {
                 const lessonElement = document.createElement('div');
-                lessonElement.className = 'lesson-card';
+                // Use Tailwind classes to style the card.
+                lessonElement.className = 'bg-white rounded-lg shadow-md overflow-hidden mb-6 transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1';
                 
                 const contentParagraphs = lesson.content.map(p => `<p class="text-gray-600 mb-2">${p}</p>`).join('');
                 const externalLink = lesson.external_links.length > 0 
                     ? `<a href="${lesson.external_links[0].url}" target="_blank" rel="noopener noreferrer" class="link-primary">Learn More: ${lesson.external_links[0].name}</a>`
                     : '';
 
+                // If a lesson has an image, create an img tag for it, wrapped for centering.
+                const imageHtml = lesson.image 
+                    ? `<div class="my-4 flex justify-center">
+                           <img src="${lesson.image}" alt="${lesson.title}" class="rounded-lg shadow-md max-w-sm w-full h-auto object-cover">
+                       </div>`
+                    : '';
+
+                // The card's content (text) is now wrapped in a div with padding.
+                // The image is placed after the title. The title is centered.
                 lessonElement.innerHTML = `
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">${lesson.title}</h3>
-                    ${contentParagraphs}
-                    <div class="interactive-example">
-                        <h4 class="font-bold">${lesson.interactive_example.title}</h4>
-                        <p>${lesson.interactive_example.scenario}</p>
-                    </div>
-                    <div class="mt-4">${externalLink}</div>`;
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">${lesson.title}</h3>
+                        ${imageHtml}
+                        ${contentParagraphs}
+                        <div class="interactive-example mt-4">
+                            <h4 class="font-bold">${lesson.interactive_example.title}</h4>
+                            <p>${lesson.interactive_example.scenario}</p>
+                        </div>
+                        <div class="mt-4">${externalLink}</div>
+                    </div>`;
                 lessonsContainer.appendChild(lessonElement);
             });
         } catch (error) {

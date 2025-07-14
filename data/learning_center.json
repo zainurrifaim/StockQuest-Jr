@@ -2,7 +2,8 @@
   "lessons": [
     {
       "id": "what-is-a-stock",
-      "title": "What is a Stock? slice of the Pie! 🍰",
+      "title": "What is a Stock? A Slice of the Pie! 🥧",
+      "image": "assets/images/lesson-pie-chart.png",
       "content": [
         "Imagine a big, yummy pie. That pie is a company (like a toy company or a video game company).",
         "A 'stock' is like getting a tiny slice of that pie. When you own a stock, you own a small piece of the company! This makes you a 'shareholder'."
@@ -21,6 +22,7 @@
     {
       "id": "why-companies-sell-stocks",
       "title": "Why Sell Slices of the Pie?",
+      "image": "assets/images/lesson-growth.png",
       "content": [
         "Companies sell stocks to raise money. They can use this money to do cool things, like invent new products, build bigger factories, or hire more people.",
         "It's like when we sold shares in our lemonade stand to get money for lemons. The company gets the money it needs to grow, and you get to own a part of it!"
@@ -39,6 +41,7 @@
     {
       "id": "how-prices-change",
       "title": "The Price Rollercoaster 🎢",
+      "image": "assets/images/lesson-rollercoaster.png",
       "content": [
         "The price of a stock goes up and down. This is called 'volatility'.",
         "If a lot of people want to buy a stock (high demand), the price goes up. If a lot of people want to sell it (low demand), the price goes down.",
@@ -53,6 +56,7 @@
     {
       "id": "what-is-a-portfolio",
       "title": "Your Treasure Chest of Stocks 💎",
+      "image": "assets/images/lesson-treasure-chest.png",
       "content": [
         "A portfolio is just a collection of all the different stocks you own. Think of it like a treasure chest or a sticker book.",
         "Instead of gold coins or stickers, your portfolio holds all your different shares from different companies."
@@ -66,6 +70,7 @@
     {
       "id": "diversification",
       "title": "Don't Put All Your Eggs in One Basket! 🥚",
+      "image": "assets/images/lesson-eggs-basket.png",
       "content": [
         "'Diversification' is a fancy word for not putting all your money into just one stock. It's smarter to buy small amounts of many different stocks from different industries (like technology, food, and cars).",
         "Why? If one company does poorly, you won't lose all your money because your other stocks might be doing great! This lowers your risk."
